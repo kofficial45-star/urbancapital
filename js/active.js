@@ -1,4 +1,4 @@
-(function ($) {
+﻿(function ($) {
     'use strict';
 
     var browserWindow = $(window);
@@ -172,4 +172,5 @@
     }
 
 })(jQuery);
+
 

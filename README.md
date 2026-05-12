@@ -1,27 +1,24 @@
-# VaultEdge – Financial & Loan Services Website Template
+# Roshan Ventures - Loan & Financial Services Website
 
 #### Preview
 
- - [Demo](https://themewagon.github.io/vaultedge/)
+- [Demo](https://themewagon.github.io/vaultedge/)
 
 #### Download
- - [Download from ThemeWagon](https://themewagon.com/themes/vaultedge/)
+- [Download from ThemeWagon](https://themewagon.com/themes/vaultedge/)
 
 ## Getting Started
 
 1. Clone Repository
-```
+```bash
 git clone https://github.com/themewagon/vaultedge.git
 ```
 
+## Author
 
-## Author 
-```
-Design and code is completely written by Rabina Vishwakarma and development team. 
-```
+Design and code is customized for Roshan Ventures.
 
 ## License
 
- - Design and Code is Copyright &copy; <a href="https://github.com/Rabina-Vishwakarma/" target="_blank">Rabina Vishwakarma</a>
- - Licensed cover under [MIT]
- - Distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
+- Design and Code customized for Roshan Ventures
+- Licensed cover under [MIT]

@@ -1,5 +1,5 @@
-/* ============================================================
-   VaultEdge — Custom Override CSS
+﻿/* ============================================================
+   Roshan Ventures â€” Custom Override CSS
    Completely new visual identity: dark navy + gold accent
    Fonts: Nunito (headings) + DM Sans (body)
    ============================================================ */
@@ -375,7 +375,7 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Nunito', sans-serif; color: var(--ve-dark); }
 .ve-footer-links { list-style:none; margin:0; padding:0; }
 .ve-footer-links li { margin-bottom:10px; }
 .ve-footer-links li a { font-size:14px; color:rgba(255,255,255,0.5); text-decoration:none; transition:var(--ve-trans); display:inline-flex; align-items:center; gap:6px; }
-.ve-footer-links li a::before { content:'›'; color:var(--ve-gold); font-size:16px; }
+.ve-footer-links li a::before { content:'â€º'; color:var(--ve-gold); font-size:16px; }
 .ve-footer-links li a:hover { color:var(--ve-gold); padding-left:4px; }
 
 .ve-footer-contact { list-style:none; margin:0; padding:0; }
@@ -872,3 +872,4 @@ body { padding-top:0; }
   .ve-nl-form input, .ve-nl-form button { width:100%; border-radius:8px !important; }
   .ve-about-img-2 { display:none; }
 }
+
