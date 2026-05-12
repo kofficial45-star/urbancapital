@@ -1,24 +1,28 @@
-# Roshan Ventures - Loan & Financial Services Website
+# Roshan Ventures — Financial & Loan Services Website Template
 
 #### Preview
 
-- [Demo](https://themewagon.github.io/vaultedge/)
+ - [Demo](#)
 
 #### Download
-- [Download from ThemeWagon](https://themewagon.com/themes/vaultedge/)
+ - [Download from Roshan Ventures](#)
 
 ## Getting Started
 
 1. Clone Repository
-```bash
+```
 git clone https://github.com/themewagon/vaultedge.git
 ```
 
-## Author
 
-Design and code is customized for Roshan Ventures.
+## Author 
+```
+Design and code is completely written by Roshan Ventures and development team. 
+```
 
 ## License
 
-- Design and Code customized for Roshan Ventures
-- Licensed cover under [MIT]
+ - Design and Code is Copyright &copy; Roshan Ventures
+ - Licensed cover under [MIT]
+ - Built for Roshan Ventures
+

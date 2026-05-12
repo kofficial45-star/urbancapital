@@ -1,4 +1,4 @@
-// Roshan Ventures Custom JS
+// VaultEdge Custom JS
 
 // Sticky navbar on scroll
 window.addEventListener('scroll', function() {
