@@ -172,6 +172,7 @@
     <script src="js/plugins/plugins.js"></script>
     <script src="js/active.js"></script>
     <script src="js/vaultedge.js"></script>
+    <script src="js/lead-config.js"></script>
     <script>
       (function () {
         var form = document.getElementById('rupebazaarContactForm');
@@ -193,11 +194,50 @@
             'Service: ' + service,
             'Message: ' + (message || 'Not provided')
           ].join('\\n');
+          var endpoint = window.RUPEBAZAAR_FORM_ENDPOINT || '';
           var whatsappUrl = 'https://wa.me/919343153987?text=' + encodeURIComponent(lead);
-          if (status) {
-            status.textContent = 'Opening WhatsApp with enquiry details. Please press send to share the lead.';
+          var payload = {
+            name: name,
+            email: email,
+            phone: phone,
+            service: service,
+            message: message || 'Not provided',
+            source: 'RupeBazaar.in website',
+            createdAt: new Date().toISOString()
+          };
+          function openWhatsapp() {
+            window.open(whatsappUrl, '_blank');
           }
-          window.open(whatsappUrl, '_blank');
+          if (!endpoint) {
+            if (status) {
+              status.textContent = 'WhatsApp mode active. Google Sheets endpoint not set yet.';
+            }
+            openWhatsapp();
+            return;
+          }
+          if (status) {
+            status.textContent = 'Saving enquiry to Google Sheets and preparing WhatsApp lead...';
+          }
+          fetch(endpoint, {
+            method: 'POST',
+            mode: 'cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          }).then(function (response) {
+            if (!response.ok) throw new Error('Submission failed');
+            return response.json().catch(function () { return {}; });
+          }).then(function () {
+            if (status) {
+              status.textContent = 'Enquiry saved. WhatsApp is opening with the same details.';
+            }
+            form.reset();
+            openWhatsapp();
+          }).catch(function () {
+            if (status) {
+              status.textContent = 'Sheet connection is not ready, so WhatsApp is opening as backup.';
+            }
+            openWhatsapp();
+          });
         });
       })();
     </script>

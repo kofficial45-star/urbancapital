@@ -909,7 +909,6 @@ body { padding-top:0; }
 }
 .partner-choice strong { color: #145a32; }
 .partner-choice span { color: #0b8f43; }
-}
 .ve-partner-card .ve-team-info h5 {
   font-size: 20px;
   margin-bottom: 6px;
@@ -917,6 +916,12 @@ body { padding-top:0; }
 .ve-partner-card .ve-team-info span {
   font-size: 13px;
   color: var(--ve-text);
+}
+.ve-form-status {
+  margin-top: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ve-navy);
 }
 
 /* Why us section */
