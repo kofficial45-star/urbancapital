@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rupebazaar.in/sitemap.xml
