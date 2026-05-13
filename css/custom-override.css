@@ -1,5 +1,5 @@
-﻿/* ============================================================
-   Roshan Ventures — Custom Override CSS
+/* ============================================================
+   RupeBazaar.in — Custom Override CSS
    Completely new visual identity: dark navy + gold accent
    Fonts: Nunito (headings) + DM Sans (body)
    ============================================================ */
@@ -549,6 +549,7 @@ body { padding-top:0; }
 }
 .ve-form-group input:focus, .ve-form-group select:focus, .ve-form-group textarea:focus { border-color:var(--ve-gold); box-shadow:0 0 0 3px rgba(212,160,23,0.12); }
 .ve-form-group textarea { resize:vertical; }
+.ve-form-status { margin: 2px 0 0; font-size: 13px; font-weight: 700; color: var(--ve-navy); }
 
 .ve-contact-aside { display:flex; flex-direction:column; gap:24px; padding-left:20px; }
 .ve-ca-box { background:var(--ve-dark); border-radius:14px; padding:32px; }
@@ -842,6 +843,81 @@ body { padding-top:0; }
 .ve-el-title { font-size:22px; font-weight:900; color:var(--ve-dark); margin-bottom:28px; padding-bottom:14px; border-bottom:2px solid var(--ve-border); display:flex; align-items:center; gap:14px; }
 .ve-el-title span { display:inline-flex; align-items:center; justify-content:center; width:36px; height:36px; background:var(--ve-gold); color:var(--ve-dark); border-radius:8px; font-size:14px; font-weight:900; flex-shrink:0; }
 .ve-el-demo { display:flex; flex-wrap:wrap; gap:14px; align-items:center; }
+
+/* Partner cards */
+.ve-partner-card {
+  min-height: 210px;
+  padding: 30px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(180deg, #ffffff 0%, #f7faff 100%);
+}
+.ve-partner-logo {
+  width: 170px;
+  height: 86px;
+  border-radius: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 18px;
+  background: #fff;
+  color: var(--ve-navy);
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 0;
+  box-shadow: 0 14px 35px rgba(10, 31, 51, 0.12);
+  border: 1px solid rgba(10, 31, 51, 0.08);
+  line-height: 1;
+}
+.ve-partner-logo span {
+  display: block;
+  font-size: 14px;
+  font-weight: 800;
+}
+.ve-partner-logo strong {
+  display: block;
+  font-size: 24px;
+  font-weight: 900;
+}
+.partner-paisabazaar strong { color: #f36f21; }
+.partner-paisabazaar span { color: #233e8b; }
+.partner-bankbazaar strong { color: #00a86b; }
+.partner-bankbazaar span { color: #263238; }
+.partner-axis {
+  background: #97144d;
+  color: #fff;
+}
+.partner-axis strong, .partner-axis span { color: #fff; }
+.partner-idfc {
+  background: #fff7f7;
+  color: #9d1d20;
+}
+.partner-idfc strong { color: #9d1d20; }
+.partner-idfc span { color: #222; }
+.partner-hdfc {
+  background: linear-gradient(135deg, #004b93 0%, #004b93 50%, #ed1c24 50%, #ed1c24 100%);
+  color: #fff;
+}
+.partner-hdfc strong, .partner-hdfc span { color: #fff; text-shadow: 0 1px 1px rgba(0,0,0,0.25); }
+.partner-choice {
+  background: #f6fff7;
+  color: #145a32;
+}
+.partner-choice strong { color: #145a32; }
+.partner-choice span { color: #0b8f43; }
+}
+.ve-partner-card .ve-team-info h5 {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+.ve-partner-card .ve-team-info span {
+  font-size: 13px;
+  color: var(--ve-text);
+}
 
 /* Why us section */
 .ve-whyus-section { background:#fff; }

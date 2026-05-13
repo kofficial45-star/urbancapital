@@ -1,11 +1,11 @@
-# Roshan Ventures — Financial & Loan Services Website Template
+# RupeBazaar.in — Financial & Loan Services Website Template
 
 #### Preview
 
  - [Demo](#)
 
 #### Download
- - [Download from Roshan Ventures](#)
+ - [Download from RupeBazaar.in](#)
 
 ## Getting Started
 
@@ -17,12 +17,12 @@ git clone https://github.com/themewagon/vaultedge.git
 
 ## Author 
 ```
-Design and code is completely written by Roshan Ventures and development team. 
+Design and code is completely written by RupeBazaar.in and development team. 
 ```
 
 ## License
 
- - Design and Code is Copyright &copy; Roshan Ventures
+ - Design and Code is Copyright &copy; RupeBazaar.in
  - Licensed cover under [MIT]
- - Built for Roshan Ventures
+ - Built for RupeBazaar.in
 
