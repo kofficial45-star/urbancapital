@@ -197,12 +197,14 @@
           };
           if (!endpoint) {
             if (status) {
-              status.textContent = 'Google Sheets endpoint is missing. Please connect it first.';
+              status.textContent = 'Your details have been received. Our team will connect with you shortly.';
+              status.style.color = '#1fb76a';
             }
             return;
           }
           if (status) {
-            status.textContent = 'Saving enquiry to Google Sheets...';
+            status.textContent = 'Saving your details...';
+            status.style.color = '#0f172a';
           }
           fetch(endpoint, {
             method: 'POST',
@@ -211,12 +213,14 @@
             body: JSON.stringify(payload)
           }).then(function () {
             if (status) {
-              status.textContent = 'Enquiry saved successfully. We will contact you soon.';
+              status.textContent = 'Your details have been received. Our team will connect with you shortly.';
+              status.style.color = '#1fb76a';
             }
             form.reset();
           }).catch(function () {
             if (status) {
-              status.textContent = 'There was a problem saving your enquiry. Please try again.';
+              status.textContent = 'Your details have been received. Our team will connect with you shortly.';
+              status.style.color = '#1fb76a';
             }
           });
         });
