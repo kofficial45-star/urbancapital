@@ -14,4 +14,4 @@ window.RUPEBAZAAR_FORM_ENDPOINT = "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL";
 After that, each enquiry will:
 - save into the Google Sheet
 - send an email to `support@rupebazaar.in`
-- open WhatsApp with the same formatted lead as backup
+- show a clean green success message on the website

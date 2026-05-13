@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Check your loan eligibility with RupeBazaar.in for personal loan, home loan, business loan, gold loan, car loan, and education loan.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Check Loan Eligibility - RupeBazaar.in</title>
+    <link rel="icon" href="img/core-img/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/custom-override.css">
+</head>
+<body>
+    <div class="preloader d-flex align-items-center justify-content-center"><div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></div>
+    <header class="ve-header" id="ve-sticky">
+        <div class="container-fluid ve-nav-wrap">
+            <div class="ve-logo"><a href="index.html"><span class="ve-logo-icon">R</span><span class="ve-logo-text">Rupe<strong>Bazaar</strong>.in</span></a></div>
+            <nav class="ve-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="loans.html">Loans</a></li>
+                    <li><a href="calculators.html">Calculators</a></li>
+                    <li><a href="eligibility.html" class="active">Eligibility</a></li>
+                    <li><a href="post.html">Resources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="ve-nav-cta"><a href="eligibility.html" class="ve-cta-btn">Check Eligibility <i class="fa fa-arrow-right"></i></a></div>
+            <button class="ve-toggler" id="ve-toggle"><span></span><span></span><span></span></button>
+        </div>
+        <div class="ve-mobile-menu" id="ve-mobile-menu">
+            <ul><li><a href="index.html">Home</a></li><li><a href="loans.html">Loans</a></li><li><a href="calculators.html">Calculators</a></li><li><a href="eligibility.html">Eligibility</a></li><li><a href="contact.html">Contact</a></li></ul>
+        </div>
+    </header>
+
+    <section class="rb-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-lg-8">
+                    <span class="ve-section-tag">Free Eligibility Check</span>
+                    <h1>Check Your <span>Loan Eligibility</span> Before You Apply</h1>
+                    <p>Share your basic income, city, employment, and loan need. RupeBazaar.in will shortlist the right route and connect with you for the next step.</p>
+                    <div class="rb-hero-actions"><a href="#eligibility-form" class="ve-btn-primary">Start Eligibility Check</a><a href="calculators.html" class="ve-btn-ghost">Calculate EMI</a></div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="rb-hero-panel"><strong>6+</strong><span>loan types covered</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="rb-section rb-section-soft" id="eligibility-form">
+        <div class="container">
+            <div class="rb-grid-2">
+                <div class="rb-form-card">
+                    <span class="ve-section-tag">Application Details</span>
+                    <h3>Loan Eligibility Form</h3>
+                    <p>These details will be saved in your RupeBazaar.in Google Sheet leads list.</p>
+                    <form class="rb-lead-form rupebazaar-lead-form">
+                        <div><label>Full Name</label><input name="name" type="text" placeholder="Your full name" required></div>
+                        <div><label>Phone Number</label><input name="phone" type="tel" placeholder="10-digit mobile number" required></div>
+                        <div><label>Email</label><input name="email" type="email" placeholder="Your email address"></div>
+                        <div><label>City</label><input name="city" type="text" placeholder="Your city" required></div>
+                        <div><label>Loan Type</label><select name="service" required><option value="">Select loan type</option><option>Personal Loan</option><option>Business Loan</option><option>Home Loan</option><option>Gold Loan</option><option>Car Loan</option><option>Education Loan</option></select></div>
+                        <div><label>Loan Amount</label><select name="loanAmount" required><option value="">Select amount</option><option>Below 1 Lakh</option><option>1 - 5 Lakh</option><option>5 - 10 Lakh</option><option>10 - 25 Lakh</option><option>25 Lakh+</option></select></div>
+                        <div><label>Employment Type</label><select name="employment" required><option value="">Select employment</option><option>Salaried</option><option>Self Employed</option><option>Business Owner</option><option>Student</option><option>Retired</option></select></div>
+                        <div><label>Monthly Income</label><select name="income" required><option value="">Select income</option><option>Below 20,000</option><option>20,000 - 50,000</option><option>50,000 - 1,00,000</option><option>1,00,000+</option></select></div>
+                        <div class="full"><label>Message</label><textarea name="message" rows="4" placeholder="Tell us your loan requirement"></textarea></div>
+                        <input type="hidden" name="source" value="RupeBazaar.in eligibility page">
+                        <button class="ve-btn-primary full" type="submit">Submit Eligibility Details <i class="fa fa-paper-plane"></i></button>
+                        <p class="rupebazaar-lead-status"></p>
+                    </form>
+                </div>
+                <div class="rb-seo-card">
+                    <span class="ve-section-tag">What Happens Next</span>
+                    <h4>Manual Follow-Up Flow</h4>
+                    <ul>
+                        <li>Lead saves to Google Sheet immediately.</li>
+                        <li>Email alert reaches the RupeBazaar.in inbox.</li>
+                        <li>Team checks income, loan type, and location.</li>
+                        <li>Customer gets a call for documents and partner options.</li>
+                        <li>Best-fit bank/NBFC route is suggested manually.</li>
+                    </ul>
+                    <div class="rb-page-links"><a href="calculators.html">Use EMI Calculator</a><a href="loans.html">Compare Loan Types</a><a href="contact.html">Talk to Expert</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="js/bootstrap/popper.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/plugins/plugins.js"></script>
+    <script src="js/active.js"></script>
+    <script src="js/vaultedge.js"></script>
+    <script src="js/lead-config.js"></script>
+    <script src="js/lead-form.js"></script>
+</body>
+</html>
