@@ -67,7 +67,7 @@
         <div class="container">
             <div class="ve-contact-cards-grid">
                 <div class="ve-contact-info-card wow fadeInUp" data-wow-delay="100ms"><div class="ve-ci-icon"><i class="fa fa-map-marker"></i></div><h5>Service Area</h5><p>Serving customers across India</p></div>
-                <div class="ve-contact-info-card wow fadeInUp" data-wow-delay="250ms"><div class="ve-ci-icon"><i class="fa fa-phone"></i></div><h5>Call Us</h5><p>+91 9343153987<br><small>Mon–Sat, 10am – 6pm IST</small></p></div>
+                <div class="ve-contact-info-card wow fadeInUp" data-wow-delay="250ms"><div class="ve-ci-icon"><i class="fa fa-phone"></i></div><h5>Call Us</h5><p>+91 9343153987<br><small>Mon-Sat, 10am - 6pm IST</small></p></div>
                 <div class="ve-contact-info-card wow fadeInUp" data-wow-delay="400ms"><div class="ve-ci-icon"><i class="fa fa-envelope"></i></div><h5>Email Us</h5><p>support@rupebazaar.in<br><small>We reply within 24 hours</small></p></div>
             </div>
         </div>
@@ -105,7 +105,7 @@
                             <ul class="ve-ca-list">
                                 <li><i class="fa fa-check-circle"></i> Free initial consultation</li>
                                 <li><i class="fa fa-check-circle"></i> Response within 24 hours</li>
-                                <li><i class="fa fa-check-circle"></i> No sales pressure — ever</li>
+                                <li><i class="fa fa-check-circle"></i> No sales pressure ever</li>
                                 <li><i class="fa fa-check-circle"></i> Certified loan planners</li>
                                 <li><i class="fa fa-check-circle"></i> Fiduciary standard of care</li>
                             </ul>
@@ -113,8 +113,7 @@
                         <div class="ve-ca-hours">
                             <h5><i class="fa fa-clock-o"></i> Office Hours</h5>
                             <ul>
-                                <li><span>Monday to Saturday</span><strong>10:00 AM – 6:00 PM</strong></li>
-                                <li><span>Sunday</span><strong>Closed</strong></li>
+                                <li><span>Monday to Saturday</span><strong>10:00 AM - 6:00 PM</strong></li>
                                 <li><span>Sunday</span><strong>Closed</strong></li>
                             </ul>
                         </div>
@@ -156,7 +155,7 @@
                         <li><i class="fa fa-map-marker"></i> India</li>
                         <li><i class="fa fa-phone"></i> +91 9343153987</li>
                         <li><i class="fa fa-envelope"></i> support@rupebazaar.in</li>
-                        <li><i class="fa fa-clock-o"></i> Mon–Sat, 10am – 6pm IST</li>
+                        <li><i class="fa fa-clock-o"></i> Mon-Sat, 10am - 6pm IST</li>
                     </ul>
                 </div>
             </div>
@@ -186,16 +185,7 @@
           var phone = (data.get('phone') || '').trim();
           var service = (data.get('service') || '').trim();
           var message = (data.get('message') || '').trim();
-          var lead = [
-            'New RupeBazaar.in loan enquiry',
-            'Name: ' + name,
-            'Phone: ' + phone,
-            'Email: ' + email,
-            'Service: ' + service,
-            'Message: ' + (message || 'Not provided')
-          ].join('\\n');
           var endpoint = window.RUPEBAZAAR_FORM_ENDPOINT || '';
-          var whatsappUrl = 'https://wa.me/919343153987?text=' + encodeURIComponent(lead);
           var payload = {
             name: name,
             email: email,
@@ -205,38 +195,29 @@
             source: 'RupeBazaar.in website',
             createdAt: new Date().toISOString()
           };
-          function openWhatsapp() {
-            window.open(whatsappUrl, '_blank');
-          }
           if (!endpoint) {
             if (status) {
-              status.textContent = 'WhatsApp mode active. Google Sheets endpoint not set yet.';
+              status.textContent = 'Google Sheets endpoint is missing. Please connect it first.';
             }
-            openWhatsapp();
             return;
           }
           if (status) {
-            status.textContent = 'Saving enquiry to Google Sheets and preparing WhatsApp lead...';
+            status.textContent = 'Saving enquiry to Google Sheets...';
           }
           fetch(endpoint, {
             method: 'POST',
-            mode: 'cors',
+            mode: 'no-cors',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload)
-          }).then(function (response) {
-            if (!response.ok) throw new Error('Submission failed');
-            return response.json().catch(function () { return {}; });
           }).then(function () {
             if (status) {
-              status.textContent = 'Enquiry saved. WhatsApp is opening with the same details.';
+              status.textContent = 'Enquiry saved successfully. We will contact you soon.';
             }
             form.reset();
-            openWhatsapp();
           }).catch(function () {
             if (status) {
-              status.textContent = 'Sheet connection is not ready, so WhatsApp is opening as backup.';
+              status.textContent = 'There was a problem saving your enquiry. Please try again.';
             }
-            openWhatsapp();
           });
         });
       })();
