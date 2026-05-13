@@ -1451,3 +1451,142 @@ body { padding-top:0; }
   .ve-about-img-2 { display:none; }
 }
 
+/* Day 2 local SEO pages */
+.rb-local-hero {
+  padding: 135px 0 78px;
+  background:
+    radial-gradient(circle at 12% 20%, rgba(214, 164, 26, 0.22), transparent 28%),
+    linear-gradient(135deg, #071525 0%, #102840 58%, #123b34 100%);
+  color: #fff;
+}
+.rb-local-hero h1 {
+  max-width: 880px;
+  font-size: 54px;
+  line-height: 1.05;
+  font-weight: 900;
+  margin: 16px 0;
+}
+.rb-local-hero h1 span { color: var(--ve-gold); }
+.rb-local-hero p {
+  max-width: 720px;
+  color: rgba(255,255,255,0.78);
+  font-size: 18px;
+}
+.rb-local-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+.rb-local-badges span {
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.08);
+  border-radius: 999px;
+  padding: 9px 14px;
+  font-size: 13px;
+  font-weight: 800;
+}
+.rb-local-nap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: -42px;
+  position: relative;
+  z-index: 3;
+}
+.rb-nap-item,
+.rb-local-panel,
+.rb-local-service,
+.rb-local-review,
+.rb-local-faq article {
+  background: #fff;
+  border: 1px solid #dbe6f3;
+  border-radius: 18px;
+  box-shadow: 0 14px 34px rgba(7,21,37,0.07);
+}
+.rb-nap-item { padding: 18px; }
+.rb-nap-item i {
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #fff5d8;
+  color: #d8a10d;
+  margin-bottom: 10px;
+}
+.rb-nap-item strong,
+.rb-local-panel h3,
+.rb-local-panel h4,
+.rb-local-service h4,
+.rb-local-faq h4 {
+  color: var(--ve-dark);
+  font-weight: 900;
+}
+.rb-nap-item span {
+  color: #5d6c82;
+  font-size: 14px;
+}
+.rb-local-panel { padding: 28px; }
+.rb-local-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.rb-local-services,
+.rb-local-review-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.rb-local-service,
+.rb-local-review,
+.rb-local-faq article { padding: 22px; }
+.rb-local-service i {
+  color: var(--ve-gold);
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+.rb-local-service p,
+.rb-local-review span {
+  color: #5d6c82;
+}
+.rb-local-review .stars {
+  color: #d9a111;
+  margin-bottom: 12px;
+  letter-spacing: 2px;
+}
+.rb-local-review p {
+  color: #45556c;
+  font-style: italic;
+}
+.rb-local-review strong {
+  color: var(--ve-dark);
+  display: block;
+}
+.rb-local-faq {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.rb-local-faq h4 {
+  font-size: 18px;
+}
+.rb-local-strip {
+  background: #fff8e8;
+  border: 1px solid #f1dba5;
+  border-radius: 18px;
+  padding: 18px 22px;
+  margin-top: 24px;
+  color: #26354d;
+}
+@media(max-width:991px) {
+  .rb-local-nap,
+  .rb-local-services,
+  .rb-local-review-grid,
+  .rb-local-grid,
+  .rb-local-faq { grid-template-columns: 1fr; }
+  .rb-local-hero h1 { font-size: 38px; }
+}
+

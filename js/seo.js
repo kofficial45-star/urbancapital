@@ -64,6 +64,22 @@
     'services.html': {
       title: 'Loan Services - Personal, Business, Home & Gold Loan | RupeBazaar.in',
       description: 'Explore RupeBazaar.in loan services including personal loan, business loan, home loan, gold loan, repayment planning, and eligibility support.'
+    },
+    'loan-consultant-indore.html': {
+      title: 'Loan Consultant in Indore - Personal, Home & Business Loan Help | RupeBazaar.in',
+      description: 'RupeBazaar.in loan consultant in Indore for personal loan, home loan, business loan, gold loan, EMI planning, and eligibility callback support.'
+    },
+    'personal-loan-agent-indore.html': {
+      title: 'Personal Loan Agent in Indore - Eligibility & EMI Help | RupeBazaar.in',
+      description: 'Get personal loan agent support in Indore with salary profile check, EMI estimate, document guidance, and assisted callback from RupeBazaar.in.'
+    },
+    'home-loan-agent-vijay-nagar-indore.html': {
+      title: 'Home Loan Agent Vijay Nagar Indore - EMI & Transfer Help | RupeBazaar.in',
+      description: 'Home loan agent near Vijay Nagar Indore for purchase, balance transfer, top-up, renovation, EMI planning, and eligibility enquiry support.'
+    },
+    'business-loan-consultant-indore.html': {
+      title: 'Business Loan Consultant in Indore - MSME & Working Capital Help | RupeBazaar.in',
+      description: 'Business loan consultant in Indore for MSME, working capital, shop expansion, cash flow, EMI planning, and assisted enquiry support.'
     }
   };
   var meta = map[page] || defaults;
@@ -121,7 +137,15 @@
     url: baseUrl,
     logo: baseUrl + 'img/core-img/favicon.ico',
     email: 'support@rupebazaar.in',
-    telephone: '+919343153987'
+    telephone: '+919343153987',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Shagun Tower, Vijay Nagar',
+      addressLocality: 'Indore',
+      addressRegion: 'Madhya Pradesh',
+      postalCode: '452010',
+      addressCountry: 'IN'
+    }
   });
 
   addJsonLd('rb-local-schema', {
@@ -134,6 +158,7 @@
     areaServed: ['Indore', 'Madhya Pradesh', 'India'],
     address: {
       '@type': 'PostalAddress',
+      streetAddress: 'Shagun Tower, Vijay Nagar',
       addressLocality: 'Indore',
       addressRegion: 'Madhya Pradesh',
       postalCode: '452010',
@@ -147,7 +172,7 @@
     }]
   });
 
-  if (page === 'eligibility.html' || page === 'contact.html') {
+  if (page === 'eligibility.html' || page === 'contact.html' || page.indexOf('indore') !== -1) {
     addJsonLd('rb-faq-schema', {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
