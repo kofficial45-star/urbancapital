@@ -26,6 +26,24 @@
 body { font-family: 'DM Sans', sans-serif; color: var(--ve-text); }
 h1,h2,h3,h4,h5,h6 { font-family: 'Nunito', sans-serif; color: var(--ve-dark); }
 
+.preloader { display: none !important; }
+
+.ve-section,
+.rb-section,
+.ve-testimonials-section,
+.ve-insights-section,
+.ve-newsletter-section,
+.ve-footer {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 720px;
+}
+
+img,
+.bg-img,
+[style*="background-image"] {
+  image-rendering: auto;
+}
+
 /* ============================================================
    NAVBAR
    ============================================================ */

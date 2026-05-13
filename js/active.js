@@ -5,9 +5,7 @@
 
     // :: 1.0 Preloader Active Code
     browserWindow.on('load', function () {
-        $('.preloader').fadeOut('slow', function () {
-            $(this).remove();
-        });
+        $('.preloader').remove();
     });
 
     // :: 2.0 Nav Active Code
@@ -27,7 +25,7 @@
             dots: true,
             autoplay: true,
             autoplayTimeout: 10000,
-            smartSpeed: 500
+            smartSpeed: 250
         });
 
         welcomeSlide.on('translate.owl.carousel', function () {
@@ -60,7 +58,7 @@
     // :: 4.0 ScrollUp Active Code
     if ($.fn.scrollUp) {
         browserWindow.scrollUp({
-            scrollSpeed: 1500,
+            scrollSpeed: 450,
             scrollText: '<i class="fa fa-angle-up"></i> Top'
         });
     }
@@ -167,9 +165,8 @@
     }
 
     // :: 11.0 Wow Active Code
-    if (browserWindow.width() > 767) {
+    if (browserWindow.width() > 991 && window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
         new WOW().init();
     }
 
 })(jQuery);
-
