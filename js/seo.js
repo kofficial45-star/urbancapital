@@ -4,37 +4,37 @@
   var pagePath = page === 'index.html' ? '' : page;
   var canonicalUrl = baseUrl + pagePath;
   var defaults = {
-    title: 'RupeBazaar.in - Loan Consultant in Indore',
+    title: 'RupeBazaar.in - Loan Help Across India',
     description: 'RupeBazaar.in helps customers compare loans, calculate EMI, check eligibility, and get assisted loan support across India.',
     image: baseUrl + 'homepage.png'
   };
   var map = {
     'index.html': {
-      title: 'RupeBazaar.in - Loan Consultant in Indore | Personal, Home & Business Loan Help',
-      description: 'RupeBazaar.in offers personal loan, home loan, business loan, gold loan, EMI calculator, eligibility check, and assisted loan guidance in Indore and across India.'
+      title: 'RupeBazaar.in - Loan Help Across India | Personal, Home & Business Loans',
+      description: 'RupeBazaar.in offers personal loan, home loan, business loan, gold loan, EMI calculator, eligibility check, and assisted loan guidance across India.'
     },
     'loans.html': {
       title: 'Loan Marketplace - Compare Loan Options | RupeBazaar.in',
       description: 'Compare personal loan, home loan, business loan, gold loan, car loan, and education loan options with RupeBazaar.in.'
     },
     'personal-loan.html': {
-      title: 'Personal Loan in Indore - Eligibility, EMI & Apply Help | RupeBazaar.in',
-      description: 'Get personal loan guidance in Indore with EMI planning, eligibility check, partner comparison, and assisted callback from RupeBazaar.in.'
+      title: 'Personal Loan in India - Eligibility, EMI & Apply Help | RupeBazaar.in',
+      description: 'Get personal loan guidance across India with EMI planning, eligibility check, partner comparison, and assisted callback from RupeBazaar.in.'
     },
     'business-loan.html': {
-      title: 'Business Loan in Indore - MSME & Working Capital Help | RupeBazaar.in',
+      title: 'Business Loan in India - MSME & Working Capital Help | RupeBazaar.in',
       description: 'Business loan support for MSME, working capital, stock purchase, expansion, and cash flow needs with RupeBazaar.in.'
     },
     'home-loan.html': {
-      title: 'Home Loan in Indore - EMI, Eligibility & Transfer Help | RupeBazaar.in',
+      title: 'Home Loan in India - EMI, Eligibility & Transfer Help | RupeBazaar.in',
       description: 'Plan home loan, balance transfer, top-up, construction, and renovation finance with RupeBazaar.in.'
     },
     'gold-loan.html': {
-      title: 'Gold Loan in Indore - Quick Secured Loan Help | RupeBazaar.in',
+      title: 'Gold Loan in India - Quick Secured Loan Help | RupeBazaar.in',
       description: 'Gold loan guidance for secured borrowing, valuation, tenure, EMI planning, and assisted follow-up with RupeBazaar.in.'
     },
     'car-loan.html': {
-      title: 'Car Loan in Indore - New & Used Car EMI Help | RupeBazaar.in',
+      title: 'Car Loan in India - New & Used Car EMI Help | RupeBazaar.in',
       description: 'Compare car loan EMI, tenure, and eligibility for new and used car finance with RupeBazaar.in.'
     },
     'education-loan.html': {
@@ -96,6 +96,30 @@
     'gold-loan-per-gram-indore.html': {
       title: 'Gold Loan Per Gram in Indore - Value, Purity & Loan Help | RupeBazaar.in',
       description: 'Understand gold loan per gram factors in Indore including purity, weight, rate, LTV, tenure, and RupeBazaar.in callback support.'
+    },
+    'post.html': {
+      title: 'Loan Insights India - Personal, Home, Business & Gold Loan Guides | RupeBazaar.in',
+      description: 'Read RupeBazaar.in loan guides for India covering personal loan, home loan EMI, business loan documents, gold loan, eligibility, and FAQ.'
+    },
+    'personal-loan-kaise-milega.html': {
+      title: 'Personal Loan Kaise Milega - Eligibility & Documents Guide | RupeBazaar.in',
+      description: 'Personal loan kaise milega in India: eligibility, income, documents, EMI comfort, credit profile, and callback support from RupeBazaar.in.'
+    },
+    'home-loan-emi-kam-kaise-kare.html': {
+      title: 'Home Loan EMI Kam Kaise Kare - EMI Planning Guide | RupeBazaar.in',
+      description: 'Learn how to reduce home loan EMI in India using tenure, down payment, balance transfer, prepayment, and EMI planning.'
+    },
+    'business-loan-documents-checklist.html': {
+      title: 'Business Loan Documents Checklist India - MSME Loan Guide | RupeBazaar.in',
+      description: 'Business loan documents checklist for India: PAN, Aadhaar, bank statement, GST, ITR, business proof, and MSME callback support.'
+    },
+    'gold-loan-lene-se-pehle.html': {
+      title: 'Gold Loan Lene Se Pehle Kya Check Kare - India Guide | RupeBazaar.in',
+      description: 'Gold loan lene se pehle purity, net weight, LTV, interest, tenure, repayment terms, and valuation process samjhein.'
+    },
+    'loan-faq.html': {
+      title: 'Loan FAQ India - Eligibility, EMI, Documents & Approval | RupeBazaar.in',
+      description: 'RupeBazaar.in loan FAQ for India covering eligibility, documents, EMI calculator, credit score, approval time, and callback process.'
     }
   };
   var meta = map[page] || defaults;
@@ -171,7 +195,7 @@
     url: baseUrl,
     telephone: '+919343153987',
     email: 'support@rupebazaar.in',
-    areaServed: ['Indore', 'Madhya Pradesh', 'India'],
+    areaServed: ['India', 'Madhya Pradesh', 'Indore'],
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Shagun Tower, Vijay Nagar',
@@ -188,7 +212,7 @@
     }]
   });
 
-  if (page === 'eligibility.html' || page === 'contact.html' || page.indexOf('indore') !== -1) {
+  if (page === 'eligibility.html' || page === 'contact.html' || page === 'loan-faq.html' || page.indexOf('indore') !== -1) {
     addJsonLd('rb-faq-schema', {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
