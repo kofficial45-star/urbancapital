@@ -80,6 +80,22 @@
     'business-loan-consultant-indore.html': {
       title: 'Business Loan Consultant in Indore - MSME & Working Capital Help | RupeBazaar.in',
       description: 'Business loan consultant in Indore for MSME, working capital, shop expansion, cash flow, EMI planning, and assisted enquiry support.'
+    },
+    'personal-loan-eligibility-indore.html': {
+      title: 'Personal Loan Eligibility in Indore - Income, EMI & Documents | RupeBazaar.in',
+      description: 'Personal loan eligibility in Indore explained with income, credit profile, documents, existing EMI load, and callback support from RupeBazaar.in.'
+    },
+    'home-loan-emi-calculator-indore.html': {
+      title: 'Home Loan EMI Calculator Indore - Affordability & Callback Help | RupeBazaar.in',
+      description: 'Plan home loan EMI in Indore for purchase, transfer, top-up, and renovation with RupeBazaar.in calculator and callback support.'
+    },
+    'business-loan-documents-indore.html': {
+      title: 'Business Loan Documents in Indore - MSME Loan Checklist | RupeBazaar.in',
+      description: 'Business loan documents in Indore for MSME, working capital, shop expansion, GST, ITR, bank statement, and callback support.'
+    },
+    'gold-loan-per-gram-indore.html': {
+      title: 'Gold Loan Per Gram in Indore - Value, Purity & Loan Help | RupeBazaar.in',
+      description: 'Understand gold loan per gram factors in Indore including purity, weight, rate, LTV, tenure, and RupeBazaar.in callback support.'
     }
   };
   var meta = map[page] || defaults;
