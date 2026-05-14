@@ -1581,6 +1581,69 @@ body { padding-top:0; }
   margin-top: 24px;
   color: #26354d;
 }
+.rb-trust-conversion {
+  background: linear-gradient(180deg, #f7fbff 0%, #ffffff 100%);
+}
+.rb-trust-card {
+  background: #fff;
+  border: 1px solid #dbe6f3;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 14px 34px rgba(7,21,37,0.07);
+}
+.rb-trust-card i {
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: #fff5d8;
+  color: #d8a10d;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+.rb-trust-card h4 {
+  color: var(--ve-dark);
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+.rb-trust-card p {
+  color: #5d6c82;
+  margin: 0;
+}
+.rb-trust-path {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.rb-trust-path a {
+  border: 1px solid #dbe6f3;
+  background: #fff;
+  color: var(--ve-dark);
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-weight: 900;
+}
+.rb-trust-path span {
+  width: 32px;
+  height: 2px;
+  background: #d8a10d;
+  opacity: .45;
+}
+.rb-form-trust-note {
+  grid-column: 1 / -1;
+  color: #5d6c82;
+  font-size: 12px;
+  margin: 0;
+}
+.rb-cibil-field select,
+.rb-lead-form select[name="cibilScore"] {
+  width: 100%;
+}
 @media(max-width:991px) {
   .rb-local-nap,
   .rb-local-services,
@@ -1588,6 +1651,7 @@ body { padding-top:0; }
   .rb-local-grid,
   .rb-local-faq { grid-template-columns: 1fr; }
   .rb-local-hero h1 { font-size: 38px; }
+  .rb-trust-path span { display: none; }
 }
 
 /* PWA install prompt */

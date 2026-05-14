@@ -120,6 +120,18 @@
     'loan-faq.html': {
       title: 'Loan FAQ India - Eligibility, EMI, Documents & Approval | RupeBazaar.in',
       description: 'RupeBazaar.in loan FAQ for India covering eligibility, documents, EMI calculator, credit score, approval time, and callback process.'
+    },
+    'privacy-policy.html': {
+      title: 'Privacy Policy | RupeBazaar.in',
+      description: 'Read how RupeBazaar.in handles loan enquiry data, callback details, and user information.'
+    },
+    'terms.html': {
+      title: 'Terms of Use | RupeBazaar.in',
+      description: 'Read RupeBazaar.in terms for loan information, calculator estimates, eligibility enquiries, and callback support.'
+    },
+    'disclaimer.html': {
+      title: 'Disclaimer | RupeBazaar.in',
+      description: 'RupeBazaar.in disclaimer for loan approval, rates, EMI calculator estimates, and lender policy.'
     }
   };
   var meta = map[page] || defaults;
@@ -212,7 +224,7 @@
     }]
   });
 
-  if (page === 'eligibility.html' || page === 'contact.html' || page === 'loan-faq.html' || page.indexOf('indore') !== -1) {
+  if (page === 'eligibility.html' || page === 'contact.html' || page === 'loan-faq.html' || page.indexOf('-loan.html') !== -1 || page.indexOf('indore') !== -1) {
     addJsonLd('rb-faq-schema', {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',

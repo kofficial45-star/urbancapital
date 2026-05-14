@@ -10,7 +10,11 @@ function doPost(e) {
       body.name || '',
       body.phone || '',
       body.email || '',
+      body.city || '',
       body.service || '',
+      body.cibilScore || '',
+      body.loanAmount || '',
+      body.income || '',
       body.message || '',
       body.source || 'RupeBazaar.in website',
       body.createdAt || ''
@@ -24,7 +28,11 @@ function doPost(e) {
       'Name: ' + (body.name || ''),
       'Phone: ' + (body.phone || ''),
       'Email: ' + (body.email || ''),
+      'City: ' + (body.city || ''),
       'Service: ' + (body.service || ''),
+      'CIBIL / Credit Score: ' + (body.cibilScore || ''),
+      'Loan Amount: ' + (body.loanAmount || ''),
+      'Income: ' + (body.income || ''),
       'Message: ' + (body.message || 'Not provided'),
       'Source: ' + (body.source || 'RupeBazaar.in website')
     ].join('\n');
@@ -43,8 +51,11 @@ function doPost(e) {
 
 function getSheet_() {
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(SHEET_NAME) || SpreadsheetApp.getActiveSpreadsheet().insertSheet(SHEET_NAME);
+  const headers = ['Submitted At', 'Name', 'Phone', 'Email', 'City', 'Service', 'CIBIL / Credit Score', 'Loan Amount', 'Income', 'Message', 'Source', 'Created At'];
   if (sheet.getLastRow() === 0) {
-    sheet.appendRow(['Submitted At', 'Name', 'Phone', 'Email', 'Service', 'Message', 'Source', 'Created At']);
+    sheet.appendRow(headers);
+  } else {
+    sheet.getRange(1, 1, 1, headers.length).setValues([headers]);
   }
   return sheet;
 }

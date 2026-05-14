@@ -2,6 +2,28 @@
   var forms = document.querySelectorAll('.rupebazaar-lead-form');
   if (!forms.length) return;
 
+  function addCibilField(form) {
+    if (form.querySelector('[name="cibilScore"]')) return;
+    var field = document.createElement('div');
+    field.className = 'rb-cibil-field';
+    field.innerHTML = '<label>CIBIL / Credit Score</label><select name="cibilScore" required><option value="">Select score range</option><option>750+</option><option>700-749</option><option>650-699</option><option>600-649</option><option>Below 600</option><option>Not sure</option></select>';
+    var anchor = form.querySelector('input[type="hidden"], button[type="submit"], .ve-btn-primary');
+    form.insertBefore(field, anchor || null);
+  }
+
+  function addTrustNote(form) {
+    if (form.querySelector('.rb-form-trust-note')) return;
+    var note = document.createElement('p');
+    note.className = 'rb-form-trust-note';
+    note.textContent = 'Your details are used only for loan consultation callback. Approval depends on lender policy.';
+    var status = form.querySelector('.rupebazaar-lead-status');
+    if (status) {
+      form.insertBefore(note, status);
+    } else {
+      form.appendChild(note);
+    }
+  }
+
   function setStatus(form, message, type) {
     var status = form.querySelector('.rupebazaar-lead-status');
     if (!status) return;
@@ -10,6 +32,8 @@
   }
 
   forms.forEach(function (form) {
+    addCibilField(form);
+    addTrustNote(form);
     form.addEventListener('submit', function (event) {
       event.preventDefault();
       var endpoint = window.RUPEBAZAAR_FORM_ENDPOINT || '';
