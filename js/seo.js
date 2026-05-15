@@ -121,6 +121,30 @@
       title: 'Loan FAQ India - Eligibility, EMI, Documents & Approval | RupeBazaar.in',
       description: 'RupeBazaar.in loan FAQ for India covering eligibility, documents, EMI calculator, credit score, approval time, and callback process.'
     },
+    'personal-loan-eligibility-improve.html': {
+      title: 'Improve Personal Loan Eligibility in India | RupeBazaar.in',
+      description: 'Learn how income, CIBIL score, existing EMI, documents, and repayment behavior can improve personal loan eligibility.'
+    },
+    'cibil-score-loan-approval.html': {
+      title: 'CIBIL Score and Loan Approval in India | RupeBazaar.in',
+      description: 'Understand why CIBIL score matters for loan approval and how repayment behavior, income, and EMI burden affect options.'
+    },
+    'home-loan-documents-checklist.html': {
+      title: 'Home Loan Documents Checklist India | RupeBazaar.in',
+      description: 'Home loan documents checklist for salaried and self-employed borrowers including KYC, income proof, bank statement, and property papers.'
+    },
+    'business-loan-rejection-reasons.html': {
+      title: 'Business Loan Rejection Reasons India | RupeBazaar.in',
+      description: 'Understand common business loan rejection reasons like weak banking, missing documents, low turnover, poor CIBIL, and high EMI burden.'
+    },
+    'gold-loan-vs-personal-loan.html': {
+      title: 'Gold Loan vs Personal Loan India | RupeBazaar.in',
+      description: 'Compare gold loan and personal loan by security, CIBIL requirement, documents, risk, tenure, and best use cases.'
+    },
+    'indore-loan-services.html': {
+      title: 'Loan Services in Indore | RupeBazaar.in',
+      description: 'RupeBazaar.in loan services in Indore for personal loan, home loan, business loan, gold loan, EMI planning, and callback support.'
+    },
     'privacy-policy.html': {
       title: 'Privacy Policy | RupeBazaar.in',
       description: 'Read how RupeBazaar.in handles loan enquiry data, callback details, and user information.'
