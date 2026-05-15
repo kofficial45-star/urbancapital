@@ -15,8 +15,13 @@ function doPost(e) {
       body.cibilScore || '',
       body.loanAmount || '',
       body.income || '',
+      body.employment || '',
+      body.existingEmi || '',
+      body.callbackTime || '',
       body.message || '',
       body.source || 'RupeBazaar.in website',
+      body.pageUrl || '',
+      body.pageTitle || '',
       body.createdAt || ''
     ];
 
@@ -33,8 +38,13 @@ function doPost(e) {
       'CIBIL / Credit Score: ' + (body.cibilScore || ''),
       'Loan Amount: ' + (body.loanAmount || ''),
       'Income: ' + (body.income || ''),
+      'Employment: ' + (body.employment || ''),
+      'Existing EMI: ' + (body.existingEmi || ''),
+      'Preferred Callback Time: ' + (body.callbackTime || ''),
       'Message: ' + (body.message || 'Not provided'),
-      'Source: ' + (body.source || 'RupeBazaar.in website')
+      'Source: ' + (body.source || 'RupeBazaar.in website'),
+      'Page URL: ' + (body.pageUrl || ''),
+      'Page Title: ' + (body.pageTitle || '')
     ].join('\n');
 
     MailApp.sendEmail({
@@ -51,7 +61,7 @@ function doPost(e) {
 
 function getSheet_() {
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(SHEET_NAME) || SpreadsheetApp.getActiveSpreadsheet().insertSheet(SHEET_NAME);
-  const headers = ['Submitted At', 'Name', 'Phone', 'Email', 'City', 'Service', 'CIBIL / Credit Score', 'Loan Amount', 'Income', 'Message', 'Source', 'Created At'];
+  const headers = ['Submitted At', 'Name', 'Phone', 'Email', 'City', 'Service', 'CIBIL / Credit Score', 'Loan Amount', 'Income', 'Employment', 'Existing EMI', 'Preferred Callback Time', 'Message', 'Source', 'Page URL', 'Page Title', 'Created At'];
   if (sheet.getLastRow() === 0) {
     sheet.appendRow(headers);
   } else {

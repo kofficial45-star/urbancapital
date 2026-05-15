@@ -137,6 +137,7 @@
   var meta = map[page] || defaults;
   var title = meta.title || defaults.title;
   var description = meta.description || defaults.description;
+  var noindexPages = ['elements.html', 'single-post.html'];
 
   document.title = title;
 
@@ -171,7 +172,7 @@
   }
 
   upsertMeta('meta[name="description"]', { name: 'description', content: description });
-  upsertMeta('meta[name="robots"]', { name: 'robots', content: 'index, follow, max-image-preview:large' });
+  upsertMeta('meta[name="robots"]', { name: 'robots', content: noindexPages.indexOf(page) !== -1 ? 'noindex, follow' : 'index, follow, max-image-preview:large' });
   upsertMeta('meta[property="og:title"]', { property: 'og:title', content: title });
   upsertMeta('meta[property="og:description"]', { property: 'og:description', content: description });
   upsertMeta('meta[property="og:type"]', { property: 'og:type', content: 'website' });
@@ -216,12 +217,51 @@
       postalCode: '452010',
       addressCountry: 'IN'
     },
+    priceRange: 'Free initial enquiry',
+    sameAs: [],
+    serviceType: ['Personal Loan Assistance', 'Home Loan Assistance', 'Business Loan Assistance', 'Gold Loan Assistance', 'Loan EMI Calculator', 'Loan Eligibility Support'],
     openingHoursSpecification: [{
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
       opens: '10:00',
       closes: '18:00'
     }]
+  });
+
+  function pageLabel(fileName) {
+    var labels = {
+      'index.html': 'Home',
+      'loans.html': 'Loans',
+      'personal-loan.html': 'Personal Loan',
+      'home-loan.html': 'Home Loan',
+      'business-loan.html': 'Business Loan',
+      'gold-loan.html': 'Gold Loan',
+      'car-loan.html': 'Car Loan',
+      'education-loan.html': 'Education Loan',
+      'calculators.html': 'Loan EMI Calculator',
+      'eligibility.html': 'Loan Eligibility',
+      'loan-faq.html': 'Loan FAQ',
+      'loan-guides.html': 'Loan Guides',
+      'post.html': 'Loan Insights',
+      'contact.html': 'Contact',
+      'about.html': 'About',
+      'services.html': 'Services',
+      'privacy-policy.html': 'Privacy Policy',
+      'terms.html': 'Terms of Use',
+      'disclaimer.html': 'Disclaimer'
+    };
+    return labels[fileName] || title.split('|')[0].trim();
+  }
+
+  addJsonLd('rb-breadcrumb-schema', {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: page === 'index.html' ? [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: baseUrl }
+    ] : [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: baseUrl },
+      { '@type': 'ListItem', position: 2, name: pageLabel(page), item: canonicalUrl }
+    ]
   });
 
   if (page === 'eligibility.html' || page === 'contact.html' || page === 'loan-faq.html' || page.indexOf('-loan.html') !== -1 || page.indexOf('indore') !== -1) {

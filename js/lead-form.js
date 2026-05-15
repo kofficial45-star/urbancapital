@@ -15,7 +15,7 @@
     if (form.querySelector('.rb-form-trust-note')) return;
     var note = document.createElement('p');
     note.className = 'rb-form-trust-note';
-    note.textContent = 'Your details are used only for loan consultation callback. Approval depends on lender policy.';
+    note.textContent = 'Your details are used only for loan consultation callback. No approval guarantee. Final offer depends on lender policy. Do not share OTP, PIN, password, or net-banking details.';
     var status = form.querySelector('.rupebazaar-lead-status');
     if (status) {
       form.insertBefore(note, status);
@@ -43,6 +43,8 @@
         payload[key] = String(value || '').trim();
       });
       payload.source = payload.source || 'RupeBazaar.in website';
+      payload.pageUrl = window.location.href;
+      payload.pageTitle = document.title;
       payload.createdAt = new Date().toISOString();
 
       if (!endpoint) {

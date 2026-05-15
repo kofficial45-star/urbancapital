@@ -1640,6 +1640,49 @@ body { padding-top:0; }
   font-size: 12px;
   margin: 0;
 }
+.rb-guide-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border: 1px solid #dbe6f3;
+  border-radius: 16px;
+  background: #fff;
+}
+.rb-guide-table th,
+.rb-guide-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e8eff7;
+  vertical-align: top;
+}
+.rb-guide-table th {
+  color: var(--ve-dark);
+  background: #fff8e8;
+  font-weight: 900;
+}
+.rb-guide-table tr:last-child td { border-bottom: 0; }
+.rb-guide-table td { color: #5d6c82; }
+.rb-mini-cta {
+  margin-top: 24px;
+  padding: 22px;
+  border: 1px solid #bfe8d5;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #effdf6 0%, #ffffff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.rb-mini-cta h4 {
+  margin: 0 0 4px;
+  color: var(--ve-dark);
+  font-weight: 900;
+}
+.rb-mini-cta p {
+  margin: 0;
+  color: #5d6c82;
+}
 .rb-cibil-field select,
 .rb-lead-form select[name="cibilScore"] {
   width: 100%;
