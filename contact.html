@@ -29,12 +29,12 @@
                         </ul>
                     </li>
                     <li><a href="services.html">Services</a></li>
-                    <li class="has-drop"><a href="#">Solutions <i class="fa fa-angle-down"></i></a>
+                    <li class="has-drop"><a href="loans.html">Solutions <i class="fa fa-angle-down"></i></a>
                         <ul class="ve-dropdown">
-                            <li><a href="#">Loan Management</a></li>
-                            <li><a href="#">Home Loan</a></li>
-                            <li><a href="#">Gold Loan</a></li>
-                            <li><a href="#">Credit Card Help</a></li>
+                            <li><a href="personal-loan.html">Personal Loan</a></li>
+                            <li><a href="home-loan.html">Home Loan</a></li>
+                            <li><a href="gold-loan.html">Gold Loan</a></li>
+                            <li><a href="eligibility.html">Check Eligibility</a></li>
                         </ul>
                     </li>
                     <li><a href="post.html">Insights</a></li>
@@ -49,7 +49,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="#">Solutions</a></li>
+                <li><a href="loans.html">Solutions</a></li>
                 <li><a href="post.html">Insights</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -93,8 +93,17 @@
                                     <select name="service" required><option value="">Select a service</option><option>Personal Loan</option><option>Business Loan</option><option>Home Loan</option><option>Gold Loan</option><option>Credit Card Support</option><option>Loan Management</option></select>
                                 </div>
                             </div>
+                            <div class="ve-form-row">
+                                <div class="ve-form-group"><label>CIBIL / Credit Score</label><select name="cibilScore" required><option value="">Select score range</option><option>750+</option><option>700-749</option><option>650-699</option><option>600-649</option><option>Below 600</option><option>Not sure</option></select></div>
+                                <div class="ve-form-group"><label>City</label><input type="text" name="city" placeholder="Your city"></div>
+                            </div>
+                            <div class="ve-form-row">
+                                <div class="ve-form-group"><label>Existing Monthly EMI</label><select name="existingEmi"><option value="">Select EMI burden</option><option>No running EMI</option><option>Below 5,000</option><option>5,000 - 15,000</option><option>15,000 - 30,000</option><option>30,000+</option></select></div>
+                                <div class="ve-form-group"><label>Preferred Callback Time</label><select name="callbackTime"><option value="">Select callback time</option><option>10 AM - 12 PM</option><option>12 PM - 3 PM</option><option>3 PM - 6 PM</option><option>Anytime during working hours</option></select></div>
+                            </div>
                             <div class="ve-form-group"><label>Your Message</label><textarea rows="5" name="message" placeholder="Tell us about your loan goals..."></textarea></div>
                             <button type="submit" class="ve-btn-primary">Send Message <i class="fa fa-paper-plane"></i></button>
+                            <p class="rb-form-trust-note">Your details are used only for loan consultation callback. No approval guarantee. Final offer depends on lender policy. Do not share OTP, PIN, password, or net-banking details.</p>
                             <p class="ve-form-status" id="rupebazaarFormStatus" aria-live="polite"></p>
                         </form>
                     </div>
@@ -121,10 +130,10 @@
                         <div class="ve-ca-social">
                             <h5>Connect With Us</h5>
                             <div class="ve-social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="contact.html"><i class="fa fa-facebook"></i></a>
+                                <a href="contact.html"><i class="fa fa-twitter"></i></a>
+                                <a href="contact.html"><i class="fa fa-linkedin"></i></a>
+                                <a href="contact.html"><i class="fa fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
@@ -139,7 +148,7 @@
                     <div class="ve-footer-brand">
                         <a href="index.html" class="ve-footer-logo"><span class="ve-logo-icon">R</span><span class="ve-logo-text">Rupe<strong>Bazaar</strong>.in</span></a>
                         <p>Empowering individuals and businesses with practical loan guidance since 2018.</p>
-                        <div class="ve-social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+                        <div class="ve-social"><a href="contact.html"><i class="fa fa-facebook"></i></a><a href="contact.html"><i class="fa fa-twitter"></i></a><a href="contact.html"><i class="fa fa-linkedin"></i></a><a href="contact.html"><i class="fa fa-instagram"></i></a></div>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-2 mb-50">
@@ -148,7 +157,7 @@
                 </div>
                 <div class="col-12 col-sm-6 col-lg-3 mb-50">
                     <h5 class="ve-footer-title">Our Services</h5>
-                    <ul class="ve-footer-links"><li><a href="#">Personal Loan</a></li><li><a href="#">Loan Management</a></li><li><a href="#">Home Loan</a></li><li><a href="#">Gold Loan</a></li><li><a href="#">Risk Management</a></li></ul>
+                    <ul class="ve-footer-links"><li><a href="personal-loan.html">Personal Loan</a></li><li><a href="business-loan.html">Business Loan</a></li><li><a href="home-loan.html">Home Loan</a></li><li><a href="gold-loan.html">Gold Loan</a></li><li><a href="loan-faq.html">Loan FAQ</a></li></ul>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-3 mb-50">
                     <h5 class="ve-footer-title">Get In Touch</h5>
@@ -163,7 +172,7 @@
         </div>
         <div class="ve-footer-bottom"><div class="container"><div class="ve-footer-bottom-inner">
                     <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> RupeBazaar.in. All Rights Reserved.</p>
-            <ul><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Use</a></li><li><a href="#">Cookie Policy</a></li></ul>
+            <ul><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Use</a></li><li><a href="disclaimer.html">Disclaimer</a></li></ul>
         </div></div></div>
     </footer>
     <script src="js/jquery/jquery-2.2.4.min.js"></script>
@@ -185,6 +194,10 @@
           var email = (data.get('email') || '').trim();
           var phone = (data.get('phone') || '').trim();
           var service = (data.get('service') || '').trim();
+          var cibilScore = (data.get('cibilScore') || '').trim();
+          var city = (data.get('city') || '').trim();
+          var existingEmi = (data.get('existingEmi') || '').trim();
+          var callbackTime = (data.get('callbackTime') || '').trim();
           var message = (data.get('message') || '').trim();
           var endpoint = window.RUPEBAZAAR_FORM_ENDPOINT || '';
           var payload = {
@@ -192,8 +205,14 @@
             email: email,
             phone: phone,
             service: service,
+            cibilScore: cibilScore,
+            city: city,
+            existingEmi: existingEmi,
+            callbackTime: callbackTime,
             message: message || 'Not provided',
             source: 'RupeBazaar.in website',
+            pageUrl: window.location.href,
+            pageTitle: document.title,
             createdAt: new Date().toISOString()
           };
           if (!endpoint) {

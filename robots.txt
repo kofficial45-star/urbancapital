@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /elements.html
+Disallow: /single-post.html
+Disallow: /scss/
+Disallow: /.github/
 
 Sitemap: https://rupebazaar.in/sitemap.xml
