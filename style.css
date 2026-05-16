@@ -2085,3 +2085,206 @@ h1, h2, h3, h4, h5, h6 {
 ::-webkit-scrollbar-track { background: #f5f7fa; }
 ::-webkit-scrollbar-thumb { background: #1b3a6b; border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: #0e9c7f; }
+
+/* ====== RupeBazaar Banner Palette Trial ====== */
+:root {
+  --rb-navy: #071a33;
+  --rb-blue: #1264f4;
+  --rb-blue-2: #2f80ff;
+  --rb-green: #08a852;
+  --rb-green-2: #17c878;
+  --rb-mint: #e9fff5;
+  --rb-sky: #eef6ff;
+  --rb-card: #ffffff;
+  --rb-border: #d9e8f8;
+  --rb-text: #516179;
+}
+
+html,
+body {
+  background:
+    radial-gradient(circle at 0 20%, rgba(8, 168, 82, 0.12), transparent 28%),
+    radial-gradient(circle at 100% 0, rgba(18, 100, 244, 0.12), transparent 32%),
+    linear-gradient(180deg, #ffffff 0%, #f5fbff 45%, #eef7ff 100%);
+  color: var(--rb-navy);
+}
+
+h1, h2, h3, h4, h5, h6,
+a,
+.section-heading h2 {
+  color: var(--rb-navy);
+}
+
+p {
+  color: var(--rb-text);
+}
+
+.preloader,
+.header-area .credit-main-menu,
+.header-area .credit-main-menu .classy-navbar {
+  background: linear-gradient(90deg, var(--rb-navy) 0%, #0d356c 54%, var(--rb-green) 100%) !important;
+}
+
+.header-area .top-header-area {
+  background: linear-gradient(90deg, #f8fcff 0%, #ecf7ff 55%, var(--rb-mint) 100%) !important;
+  border-bottom: 1px solid var(--rb-border);
+}
+
+.header-area .top-header-area .top-contact-info a,
+.top-header-area a {
+  color: var(--rb-navy) !important;
+}
+
+.header-area .credit-main-menu {
+  border-bottom: 3px solid var(--rb-blue);
+  box-shadow: 0 12px 32px rgba(7, 26, 51, 0.16);
+}
+
+.header-area .credit-main-menu .classy-navbar .classynav ul li a:hover,
+.header-area .credit-main-menu .classy-navbar .classynav ul li a:focus,
+.header-area .credit-main-menu .classy-navbar .contact a:hover {
+  color: #dfffe9 !important;
+}
+
+.header-area .credit-main-menu .classy-navbar .contact::before,
+.header-area .credit-main-menu .classy-navbar .contact::after {
+  background: var(--rb-green-2) !important;
+}
+
+.credit-btn,
+.btn.credit-btn,
+button[type="submit"],
+input[type="submit"] {
+  background: linear-gradient(135deg, var(--rb-green) 0%, var(--rb-green-2) 100%) !important;
+  border: 0 !important;
+  box-shadow: 0 14px 30px rgba(8, 168, 82, 0.24);
+  color: #ffffff !important;
+}
+
+.credit-btn:hover,
+.credit-btn:focus,
+.btn.credit-btn:hover,
+.btn.credit-btn:focus,
+button[type="submit"]:hover,
+input[type="submit"]:hover {
+  background: linear-gradient(135deg, var(--rb-blue) 0%, var(--rb-green) 100%) !important;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+}
+
+.credit-btn.btn-2,
+.hero-area .owl-prev,
+.hero-area .owl-next,
+#scrollUp {
+  background: linear-gradient(135deg, var(--rb-blue), #0047c7) !important;
+  color: #ffffff !important;
+}
+
+.section-heading .line,
+.section-heading .line::after {
+  background: linear-gradient(90deg, var(--rb-green), var(--rb-blue)) !important;
+}
+
+.hero-area .welcome-text h6,
+.hero-area .welcome-text h2 span,
+.single-features-area:hover h5,
+.single-service-area .icon i,
+.footer-area .single-footer-widget .widget-title,
+.footer-area .single-footer-widget ul li a:hover,
+.footer-area .copywrite-area .copywrite-text a:hover {
+  color: var(--rb-green) !important;
+}
+
+.single-service-area,
+.single-news-area,
+.credit-tabs-content,
+.contact--area form,
+.newsletter-area form,
+.single-testimonial-area {
+  background: linear-gradient(145deg, #ffffff 0%, #f7fbff 62%, #eef8ff 100%) !important;
+  border: 1px solid var(--rb-border);
+  box-shadow: 0 16px 42px rgba(18, 100, 244, 0.08) !important;
+}
+
+.single-service-area .icon,
+.single-features-area .features-icon {
+  background: linear-gradient(135deg, rgba(8, 168, 82, 0.14), rgba(18, 100, 244, 0.14)) !important;
+  border: 1px solid rgba(18, 100, 244, 0.18);
+}
+
+.single-features-area .features-icon i,
+.single-features-area .features-icon img {
+  color: var(--rb-blue) !important;
+}
+
+.single-service-area:hover,
+.single-news-area:hover {
+  box-shadow: 0 20px 50px rgba(8, 168, 82, 0.13) !important;
+}
+
+.special-feature-area .special-feature-content,
+.cta-area .cta-content {
+  background:
+    radial-gradient(circle at 85% 20%, rgba(255,255,255,0.28), transparent 22%),
+    linear-gradient(135deg, var(--rb-green) 0%, var(--rb-blue) 100%) !important;
+}
+
+.special-feature-area.style-2 .special-feature-content,
+.cta-2-area {
+  background: linear-gradient(135deg, var(--rb-navy) 0%, #0b4eb6 58%, var(--rb-green) 100%) !important;
+}
+
+.bg-gray {
+  background: linear-gradient(180deg, #f8fcff 0%, #eef7ff 100%) !important;
+}
+
+.bg-img::after {
+  background-color: rgba(7, 26, 51, 0.58) !important;
+}
+
+.footer-area {
+  background:
+    radial-gradient(circle at 90% 0, rgba(8, 168, 82, 0.2), transparent 28%),
+    linear-gradient(135deg, var(--rb-navy) 0%, #082c57 62%, #053d2e 100%) !important;
+  border-top: 4px solid var(--rb-green);
+}
+
+.copywrite-area {
+  background: rgba(2, 14, 30, 0.7) !important;
+}
+
+.newsletter-area::before {
+  background: linear-gradient(135deg, rgba(7, 26, 51, 0.86), rgba(18, 100, 244, 0.7)) !important;
+}
+
+.contact--area input,
+.contact--area select,
+.contact--area textarea,
+.newsletter-area input,
+input,
+select,
+textarea {
+  border-color: var(--rb-border) !important;
+}
+
+.contact--area input:focus,
+.contact--area select:focus,
+.contact--area textarea:focus,
+.newsletter-area input:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--rb-blue) !important;
+  box-shadow: 0 0 0 4px rgba(18, 100, 244, 0.12) !important;
+}
+
+.credit-tabs-content .nav-tabs .nav-link.active,
+.credit-tabs-content .nav-tabs .nav-link:hover {
+  background: linear-gradient(135deg, var(--rb-blue), var(--rb-green)) !important;
+  color: #ffffff !important;
+}
+
+::-webkit-scrollbar-track { background: #eef7ff; }
+::-webkit-scrollbar-thumb { background: var(--rb-blue); }
+::-webkit-scrollbar-thumb:hover { background: var(--rb-green); }
+/* ====== End RupeBazaar Banner Palette Trial ====== */

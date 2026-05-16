@@ -41,6 +41,11 @@ Use URL Inspection and request indexing for these first:
 - `https://rupebazaar.in/home-loan-documents-checklist.html`
 - `https://rupebazaar.in/business-loan-rejection-reasons.html`
 - `https://rupebazaar.in/gold-loan-vs-personal-loan.html`
+- `https://rupebazaar.in/personal-loan-documents-checklist.html`
+- `https://rupebazaar.in/loan-eligibility-calculator-guide.html`
+- `https://rupebazaar.in/loan-balance-transfer-guide.html`
+- `https://rupebazaar.in/loan-against-property-guide.html`
+- `https://rupebazaar.in/low-cibil-loan-options.html`
 - `https://rupebazaar.in/indore-loan-services.html`
 
 ## 4. Technical Checks
@@ -58,6 +63,7 @@ Use URL Inspection and request indexing for these first:
   - Existing EMI
   - Preferred callback time
   - Page URL
+  - UTM/referrer source where available
   - Lead quality
 
 ## 5. What Not To Index
