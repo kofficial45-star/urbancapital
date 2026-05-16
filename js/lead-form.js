@@ -31,6 +31,18 @@
     status.style.color = type === 'success' ? '#1fb76a' : '#0d1b2a';
   }
 
+  function buildTrackingSource(baseSource) {
+    var params = new URLSearchParams(window.location.search || '');
+    var bits = [baseSource || 'RupeBazaar.in website'];
+    var path = window.location.pathname.split('/').pop() || 'index.html';
+    bits.push('page=' + path);
+    ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term'].forEach(function (key) {
+      if (params.get(key)) bits.push(key + '=' + params.get(key));
+    });
+    if (document.referrer) bits.push('referrer=' + document.referrer.slice(0, 120));
+    return bits.join(' | ');
+  }
+
   forms.forEach(function (form) {
     addCibilField(form);
     addTrustNote(form);
@@ -42,7 +54,7 @@
       formData.forEach(function (value, key) {
         payload[key] = String(value || '').trim();
       });
-      payload.source = payload.source || 'RupeBazaar.in website';
+      payload.source = buildTrackingSource(payload.source);
       payload.pageUrl = window.location.href;
       payload.pageTitle = document.title;
       payload.createdAt = new Date().toISOString();

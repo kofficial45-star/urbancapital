@@ -125,6 +125,26 @@
       title: 'Improve Personal Loan Eligibility in India | RupeBazaar.in',
       description: 'Learn how income, CIBIL score, existing EMI, documents, and repayment behavior can improve personal loan eligibility.'
     },
+    'personal-loan-documents-checklist.html': {
+      title: 'Personal Loan Documents Checklist India | RupeBazaar.in',
+      description: 'Personal loan documents checklist for salaried and self-employed borrowers including KYC, income proof, bank statement, CIBIL range, and EMI details.'
+    },
+    'loan-eligibility-calculator-guide.html': {
+      title: 'Loan Eligibility Calculator Guide India | RupeBazaar.in',
+      description: 'Understand loan eligibility calculator inputs like income, existing EMI, CIBIL score, employment type, city, tenure, and repayment comfort.'
+    },
+    'loan-balance-transfer-guide.html': {
+      title: 'Loan Balance Transfer Guide India | RupeBazaar.in',
+      description: 'Loan balance transfer guide for India covering interest rate, processing fee, remaining tenure, top-up needs, and total savings check.'
+    },
+    'loan-against-property-guide.html': {
+      title: 'Loan Against Property Guide India | RupeBazaar.in',
+      description: 'Loan against property guide covering eligibility, property papers, valuation, income checks, legal review, LTV, tenure, and repayment risk.'
+    },
+    'low-cibil-loan-options.html': {
+      title: 'Low CIBIL Loan Options India | RupeBazaar.in',
+      description: 'Low CIBIL loan options in India explained with secured loan routes, co-applicant, lower amount, income proof, and credit improvement tips.'
+    },
     'cibil-score-loan-approval.html': {
       title: 'CIBIL Score and Loan Approval in India | RupeBazaar.in',
       description: 'Understand why CIBIL score matters for loan approval and how repayment behavior, income, and EMI burden affect options.'
@@ -266,6 +286,11 @@
       'eligibility.html': 'Loan Eligibility',
       'loan-faq.html': 'Loan FAQ',
       'loan-guides.html': 'Loan Guides',
+      'personal-loan-documents-checklist.html': 'Personal Loan Documents Checklist',
+      'loan-eligibility-calculator-guide.html': 'Loan Eligibility Calculator Guide',
+      'loan-balance-transfer-guide.html': 'Loan Balance Transfer Guide',
+      'loan-against-property-guide.html': 'Loan Against Property Guide',
+      'low-cibil-loan-options.html': 'Low CIBIL Loan Options',
       'post.html': 'Loan Insights',
       'contact.html': 'Contact',
       'about.html': 'About',

@@ -935,6 +935,206 @@ body { padding-top:0; }
   font-size: 13px;
   color: var(--ve-text);
 }
+.rb-partner-platforms {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: -22px 0 34px;
+}
+.rb-platform-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ffffff 0%, #eef8ff 100%);
+  border: 1px solid var(--ve-border);
+  box-shadow: 0 12px 28px rgba(18, 100, 244, 0.08);
+}
+.rb-platform-pill span {
+  color: #516179;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.rb-platform-pill strong {
+  color: #08a852;
+  font-size: 15px;
+  font-weight: 900;
+}
+.rb-lender-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+.rb-lender-card {
+  min-height: 215px;
+  padding: 24px 18px;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #ffffff 0%, #f8fcff 58%, #eef8ff 100%);
+  border: 1px solid var(--ve-border);
+  box-shadow: 0 18px 42px rgba(18, 100, 244, 0.10);
+  text-align: center;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.rb-lender-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 24px 54px rgba(8, 168, 82, 0.14);
+}
+.rb-lender-logo {
+  width: 134px;
+  height: 84px;
+  margin: 0 auto 18px;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid rgba(18, 100, 244, 0.12);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.7), 0 12px 28px rgba(7, 26, 51, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  position: relative;
+  overflow: hidden;
+}
+.rb-brand-mark {
+  min-width: 82px;
+  min-height: 40px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 900;
+  letter-spacing: .2px;
+  line-height: 1;
+  text-align: center;
+  box-shadow: 0 10px 24px rgba(7, 26, 51, .14);
+  position: relative;
+  z-index: 1;
+}
+.brand-hdfc { background: linear-gradient(135deg, #004b93 0%, #004b93 52%, #ed1c24 52%, #ed1c24 100%); }
+.brand-icici { background: linear-gradient(135deg, #b64a11, #f58220); font-style: italic; }
+.brand-axis { background: #97144d; }
+.brand-idfc { background: #ffffff; color: #9d1d20; border: 2px solid #9d1d20; }
+.brand-abfl { background: linear-gradient(135deg, #e31e24, #f5a623); }
+.brand-bajaj { background: linear-gradient(135deg, #005cab, #00a3e0); }
+.brand-smfg { background: linear-gradient(135deg, #d71920, #00a0df); }
+.brand-flexi { background: linear-gradient(135deg, #1677ff, #00b894); font-size: 14px; }
+.brand-incred { background: #ffffff; color: #f58220; border: 2px solid #f58220; }
+.brand-fibe { background: #ffffff; color: #111; border: 2px solid #111; font-size: 24px; }
+.brand-piramal { background: #ffffff; color: #ef3b24; border: 2px solid #ef3b24; }
+.brand-aavas { background: linear-gradient(135deg, #25408f, #ed1c24); }
+.rb-lender-logo::before {
+  content: "";
+  position: absolute;
+  inset: auto -20px -30px auto;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, rgba(8,168,82,.14), transparent 68%);
+}
+.rb-lender-logo img {
+  max-width: 100%;
+  max-height: 48px;
+  object-fit: contain;
+  position: relative;
+  z-index: 1;
+}
+.rb-lender-logo span {
+  display: none;
+  color: #071a33;
+  font-weight: 900;
+  font-size: 20px;
+  position: relative;
+  z-index: 1;
+}
+.rb-lender-logo img[src=""],
+.rb-lender-logo img:not([src]) {
+  display: none;
+}
+.rb-lender-logo img[src=""] + span,
+.rb-lender-logo img:not([src]) + span {
+  display: block;
+}
+.rb-lender-card h5 {
+  margin: 0 0 7px;
+  color: #071a33;
+  font-size: 18px;
+  font-weight: 900;
+}
+.rb-lender-card p {
+  margin: 0;
+  color: #516179;
+  font-size: 13px;
+  line-height: 1.55;
+}
+.rb-partner-note {
+  margin-top: 30px;
+  padding: 16px 18px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(8,168,82,0.10), rgba(18,100,244,0.08));
+  border: 1px solid var(--ve-border);
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.rb-partner-note i {
+  color: #1264f4;
+  font-size: 18px;
+  margin-top: 5px;
+}
+.rb-partner-note p {
+  margin: 0;
+  color: #516179;
+  line-height: 1.65;
+  font-size: 13px;
+}
+.rb-home-lenders {
+  padding-top: 82px;
+  padding-bottom: 82px;
+}
+.rb-lender-mini-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 16px;
+}
+.rb-lender-mini-grid article {
+  min-height: 130px;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid var(--ve-border);
+  box-shadow: 0 14px 34px rgba(18, 100, 244, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 12px;
+  text-align: center;
+}
+.rb-lender-mini-grid .rb-brand-mark {
+  min-width: 78px;
+  min-height: 38px;
+  font-size: 14px;
+}
+.rb-lender-mini-grid span {
+  color: #071a33;
+  font-weight: 900;
+  font-size: 13px;
+  line-height: 1.25;
+}
+@media(max-width: 991px) {
+  .rb-lender-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .rb-lender-mini-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media(max-width: 575px) {
+  .rb-lender-grid { grid-template-columns: 1fr; }
+  .rb-lender-mini-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .rb-lender-card { min-height: auto; }
+}
 .ve-form-status {
   margin-top: 6px;
   font-size: 13px;
@@ -1749,4 +1949,5 @@ body { padding-top:0; }
   .rb-pwa-toast { align-items: flex-start; }
   .rb-pwa-toast button { padding: 9px 12px; }
 }
+
 
