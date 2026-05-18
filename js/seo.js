@@ -336,4 +336,53 @@
       ]
     });
   }
+
+  if (page === 'credit-cards.html') {
+    addJsonLd('rb-credit-card-faq-schema', {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Can RupeBazaar.in guarantee credit card approval?',
+          acceptedAnswer: { '@type': 'Answer', text: 'No. Credit card approval, credit limit, annual fee waiver, and benefits depend on the issuer policy, credit profile, income, documents, and internal checks.' }
+        },
+        {
+          '@type': 'Question',
+          name: 'What documents are generally needed for a credit card?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Most issuers ask for PAN, address proof such as Aadhaar or passport, income proof such as salary slips or bank statements, and sometimes a recent photograph.' }
+        },
+        {
+          '@type': 'Question',
+          name: 'How should I compare credit cards?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Compare annual fee, waiver rules, reward caps, cashback categories, lounge access, fuel surcharge waiver, network type, and eligibility before applying.' }
+        }
+      ]
+    });
+
+    addJsonLd('rb-credit-card-list-schema', {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Credit cards listed on RupeBazaar.in',
+      itemListElement: [
+        ['Kotak Cashback Plus Credit Card', 'kotak-cashback-plus'],
+        ['BOBCARD Eterna Credit Card', 'bobcard-eterna'],
+        ['SBI SimplyCLICK Credit Card', 'sbi-simplyclick'],
+        ['Axis Neo RuPay Credit Card', 'axis-neo-rupay'],
+        ['Kotak League Platinum Credit Card', 'kotak-league-platinum'],
+        ['SBM ZET Credit Card', 'sbm-zet'],
+        ['SBM Novio Credit Card', 'sbm-novio'],
+        ['Zagg RuPay Credit Card', 'zagg-rupay'],
+        ['SBI Cashback Credit Card', 'sbi-cashback'],
+        ['Yes Bank Pop-Club Credit Card', 'yes-bank-pop-club'],
+        ['Axis Rewards Visa Credit Card', 'axis-rewards-visa'],
+        ['IndusInd Tiger Credit Card', 'indusind-tiger'],
+        ['HDFC IRCTC Credit Card', 'hdfc-irctc'],
+        ['IDFC First Power Plus Credit Card', 'idfc-first-power-plus'],
+        ['Axis Indian Oil RuPay Credit Card', 'axis-indian-oil-rupay']
+      ].map(function (item, index) {
+        return { '@type': 'ListItem', position: index + 1, name: item[0], url: canonicalUrl + '#' + item[1] };
+      })
+    });
+  }
 })();

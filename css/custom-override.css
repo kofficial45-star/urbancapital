@@ -1959,6 +1959,41 @@ body { padding-top:0; }
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 26px;
 }
+.rb-card-filterbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin: -12px auto 32px;
+  padding: 14px;
+  border: 1px solid #dbe6f3;
+  border-radius: 18px;
+  background: rgba(255,255,255,.86);
+  box-shadow: 0 14px 36px rgba(7,21,37,.07);
+}
+.rb-card-filterbar button,
+.rb-card-filterbar input {
+  border-radius: 999px;
+  border: 1px solid #d7e2ef;
+  background: #fff;
+  color: var(--ve-dark);
+  min-height: 42px;
+  padding: 10px 16px;
+  font-weight: 800;
+}
+.rb-card-filterbar button {
+  cursor: pointer;
+}
+.rb-card-filterbar button.active,
+.rb-card-filterbar button:hover {
+  background: var(--ve-gold);
+  border-color: var(--ve-gold);
+}
+.rb-card-filterbar input {
+  flex: 1 1 260px;
+  min-width: 220px;
+  outline: none;
+}
 .rb-cc-card {
   background: #fff;
   border: 1px solid #dbe6f3;
@@ -2235,6 +2270,13 @@ body { padding-top:0; }
   }
 }
 @media(max-width: 520px) {
+  .rb-card-filterbar {
+    padding: 10px;
+  }
+  .rb-card-filterbar button,
+  .rb-card-filterbar input {
+    width: 100%;
+  }
   .rb-cc-visual {
     min-height: 330px;
     padding: 22px;

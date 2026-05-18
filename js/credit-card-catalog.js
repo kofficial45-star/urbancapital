@@ -225,6 +225,11 @@
   const grid = document.querySelector('.rb-credit-card-grid');
   const detailsContainer = document.querySelector('#card-details .container');
   if (!grid || !detailsContainer) return;
+  const header = document.querySelector('#cards .ve-section-header');
+
+  function normalize(text) {
+    return String(text || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+  }
 
   function cardVisual(card) {
     return `
@@ -268,7 +273,7 @@
 
   function detailPanel(card) {
     return `
-      <article class="rb-card-detail-panel" id="${card.id}">
+      <article class="rb-card-detail-panel" id="${card.id}" data-card-detail="${normalize(card.cardName + ' ' + card.bank + ' ' + card.tag + ' ' + card.short)}">
         <div class="rb-card-detail-head">
           <div>
             <span class="rb-card-tag">${card.tag}</span>
@@ -287,6 +292,20 @@
       </article>`;
   }
 
+  if (header && !document.querySelector('.rb-card-filterbar')) {
+    header.insertAdjacentHTML('afterend', `
+      <div class="rb-card-filterbar" aria-label="Credit card filters">
+        <button type="button" class="active" data-filter="all">All Cards</button>
+        <button type="button" data-filter="cashback">Cashback</button>
+        <button type="button" data-filter="travel">Travel</button>
+        <button type="button" data-filter="fuel">Fuel</button>
+        <button type="button" data-filter="rupay">RuPay / UPI</button>
+        <button type="button" data-filter="lifetime free">Lifetime Free</button>
+        <input type="search" placeholder="Search cards, bank, benefit..." aria-label="Search credit cards">
+      </div>
+    `);
+  }
+
   grid.insertAdjacentHTML('beforeend', cards.map(listCard).join(''));
 
   cards.forEach((card) => {
@@ -298,4 +317,35 @@
 
   const count = document.querySelector('.rb-card-hero .rb-hero-panel strong');
   if (count) count.textContent = String(document.querySelectorAll('.rb-cc-card').length);
+
+  document.querySelectorAll('.rb-cc-card').forEach((card) => {
+    const text = normalize(card.textContent);
+    card.setAttribute('data-card-search', text);
+  });
+
+  const filterbar = document.querySelector('.rb-card-filterbar');
+  if (filterbar) {
+    const input = filterbar.querySelector('input');
+    const buttons = filterbar.querySelectorAll('button');
+    let activeFilter = 'all';
+
+    function applyFilter() {
+      const query = normalize(input ? input.value : '');
+      document.querySelectorAll('.rb-cc-card').forEach((card) => {
+        const text = card.getAttribute('data-card-search') || normalize(card.textContent);
+        const matchFilter = activeFilter === 'all' || text.indexOf(activeFilter) !== -1;
+        const matchQuery = !query || text.indexOf(query) !== -1;
+        card.style.display = matchFilter && matchQuery ? '' : 'none';
+      });
+    }
+
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => {
+        activeFilter = button.getAttribute('data-filter') || 'all';
+        buttons.forEach((item) => item.classList.toggle('active', item === button));
+        applyFilter();
+      });
+    });
+    if (input) input.addEventListener('input', applyFilter);
+  }
 })();

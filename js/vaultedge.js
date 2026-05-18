@@ -63,3 +63,16 @@ document.querySelectorAll('.ve-faq-q').forEach(function(q) {
         if (!wasOpen) item.classList.add('open');
     });
 });
+
+// Lightweight performance polish for static hosting.
+document.querySelectorAll('img').forEach(function(img) {
+    if (!img.hasAttribute('loading')) img.setAttribute('loading', 'lazy');
+    if (!img.hasAttribute('decoding')) img.setAttribute('decoding', 'async');
+});
+
+document.querySelectorAll('a[href$=".html"]').forEach(function(link) {
+    if (!link.hasAttribute('aria-label')) {
+        var label = (link.textContent || '').trim();
+        if (label) link.setAttribute('aria-label', label);
+    }
+});
