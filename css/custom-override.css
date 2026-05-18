@@ -1950,4 +1950,278 @@ body { padding-top:0; }
   .rb-pwa-toast button { padding: 9px 12px; }
 }
 
+/* Credit card marketplace */
+.rb-card-hero .rb-hero-panel strong {
+  color: var(--ve-gold);
+}
+.rb-credit-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px;
+}
+.rb-cc-card {
+  background: #fff;
+  border: 1px solid #dbe6f3;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 18px 44px rgba(7,21,37,.09);
+}
+.rb-cc-visual {
+  min-height: 230px;
+  margin: 18px;
+  border-radius: 18px;
+  position: relative;
+  overflow: hidden;
+  padding: 22px;
+  background: linear-gradient(135deg, #fffdf6 0%, #ffffff 45%, #eef3fb 100%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.rb-cc-visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 14% 18%, rgba(212,160,23,.14), transparent 24%),
+    radial-gradient(circle at 88% 18%, rgba(7,21,37,.06), transparent 26%);
+  pointer-events: none;
+}
+.rb-cc-visual::after {
+  content: "";
+  position: absolute;
+  top: 38px;
+  left: 50%;
+  width: 210px;
+  height: 132px;
+  border-radius: 16px;
+  transform: translateX(-50%) rotate(-4deg);
+  box-shadow: 0 22px 45px rgba(0,0,0,.4);
+  z-index: 1;
+}
+.rb-cc-real {
+  background: linear-gradient(135deg, #fffdf6 0%, #ffffff 48%, #eef3fb 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rb-cc-real img {
+  position: relative;
+  top: auto;
+  left: auto;
+  width: min(92%, 360px);
+  height: 180px;
+  object-fit: contain;
+  transform: none;
+  z-index: 5;
+  border-radius: 16px;
+  filter: drop-shadow(0 22px 30px rgba(7,21,37,.22));
+}
+.rb-cc-real img.is-missing {
+  display: none;
+}
+.rb-cc-real:has(img:not(.is-missing))::after,
+.rb-cc-real:has(img:not(.is-missing)) .rb-bank-chip,
+.rb-cc-real:has(img:not(.is-missing)) .rb-card-chip,
+.rb-cc-real:has(img:not(.is-missing)) .rb-card-infinity,
+.rb-cc-real:has(img:not(.is-missing)) .rb-card-wave,
+.rb-cc-real:has(img:not(.is-missing)) .rb-cc-ribbon,
+.rb-cc-real:has(img:not(.is-missing)) ul {
+  display: none;
+}
+.rb-cc-real:has(img:not(.is-missing)) .rb-cc-ribbon {
+  top: 174px;
+}
+.rb-cc-real:has(img:not(.is-missing)) ul {
+  margin-top: 190px;
+}
+.rb-cc-red::after { background: linear-gradient(135deg, #ff4d4d, #b9051d); }
+.rb-cc-blue::after { background: linear-gradient(135deg, #1a6d88, #072940); }
+.rb-cc-green::after { background: linear-gradient(135deg, #0f8c54, #04391f); }
+.rb-cc-purple::after { background: linear-gradient(135deg, #2d2530, #b41f5d); }
+.rb-bank-chip {
+  position: absolute;
+  top: 58px;
+  left: calc(50% - 82px);
+  z-index: 3;
+  color: #fff;
+  font-weight: 900;
+  font-size: 13px;
+  letter-spacing: .2px;
+}
+.rb-card-chip {
+  position: absolute;
+  top: 96px;
+  left: calc(50% - 78px);
+  z-index: 3;
+  width: 28px;
+  height: 22px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #f7df8a, #b98a22);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.35);
+}
+.rb-card-infinity {
+  position: absolute;
+  top: 72px;
+  right: calc(50% - 86px);
+  z-index: 3;
+  color: rgba(255,255,255,.9);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.rb-card-wave {
+  position: absolute;
+  top: 98px;
+  right: calc(50% - 74px);
+  z-index: 3;
+  width: 20px;
+  height: 24px;
+  border-right: 3px solid rgba(255,255,255,.75);
+  border-radius: 50%;
+}
+.rb-cc-ribbon {
+  position: absolute;
+  top: 160px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  min-width: 255px;
+  max-width: calc(100% - 44px);
+  padding: 12px 18px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 900;
+  background: linear-gradient(135deg, rgba(212,160,23,.92), rgba(109,73,33,.9));
+  box-shadow: 0 12px 30px rgba(0,0,0,.35);
+}
+.rb-cc-blue .rb-cc-ribbon { background: linear-gradient(135deg, rgba(18,103,131,.94), rgba(5,53,78,.94)); }
+.rb-cc-green .rb-cc-ribbon { background: linear-gradient(135deg, rgba(12,128,72,.94), rgba(7,66,38,.94)); }
+.rb-cc-purple .rb-cc-ribbon { background: linear-gradient(135deg, rgba(151,20,77,.94), rgba(64,24,48,.94)); }
+.rb-cc-visual ul {
+  position: relative;
+  z-index: 4;
+  margin: 170px 0 0;
+  padding-left: 18px;
+}
+.rb-cc-visual li {
+  list-style: disc;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.45;
+}
+.rb-cc-content {
+  padding: 0 24px 26px;
+}
+.rb-card-tag {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 6px 12px;
+  background: #fff8e8;
+  color: #b8860b;
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+.rb-cc-content h3 {
+  font-size: 22px;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+.rb-cc-content p {
+  color: #5d6c82;
+  line-height: 1.65;
+  margin-bottom: 18px;
+}
+.rb-cc-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.rb-cc-actions .ve-btn-ghost,
+.rb-card-detail-head .ve-btn-primary,
+.rb-cc-actions .ve-btn-primary {
+  padding: 12px 20px;
+  border-radius: 999px;
+}
+.rb-card-detail-panel {
+  background: #fff;
+  border: 1px solid #dbe6f3;
+  border-radius: 22px;
+  box-shadow: 0 18px 44px rgba(7,21,37,.08);
+  padding: 28px;
+  margin-bottom: 26px;
+  scroll-margin-top: 96px;
+}
+.rb-card-detail-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding-bottom: 18px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid #e8eff7;
+}
+.rb-card-detail-head h3 {
+  font-weight: 900;
+  margin-bottom: 6px;
+}
+.rb-card-detail-head p {
+  margin: 0;
+  color: #5d6c82;
+}
+.rb-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+.rb-detail-grid h4 {
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+.rb-detail-grid ul {
+  padding-left: 18px;
+}
+.rb-detail-grid li {
+  color: #5d6c82;
+  margin-bottom: 8px;
+  list-style: disc;
+}
+.rb-detail-grid .ve-ca-list {
+  padding-left: 0;
+}
+.rb-detail-grid .ve-ca-list li {
+  list-style: none;
+}
+@media(max-width: 991px) {
+  .rb-credit-card-grid,
+  .rb-detail-grid {
+    grid-template-columns: 1fr;
+  }
+  .rb-card-detail-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+@media(max-width: 520px) {
+  .rb-cc-visual {
+    min-height: 330px;
+    padding: 22px;
+  }
+  .rb-cc-visual::after {
+    width: 178px;
+    height: 116px;
+  }
+  .rb-cc-ribbon {
+    min-width: 210px;
+    font-size: 12px;
+  }
+}
+
 

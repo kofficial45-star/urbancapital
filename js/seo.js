@@ -45,6 +45,10 @@
       title: 'Loan EMI Calculator - Personal, Home, Business & Gold Loan | RupeBazaar.in',
       description: 'Use RupeBazaar.in loan EMI calculator for personal, home, business, gold, car, and education loan planning.'
     },
+    'credit-cards.html': {
+      title: 'Best Credit Cards in India - Compare Benefits, Fees & Eligibility | RupeBazaar.in',
+      description: 'Compare credit cards in India with benefits, fees, eligibility, documents, reward details, and apply links on RupeBazaar.in.'
+    },
     'eligibility.html': {
       title: 'Check Loan Eligibility Online | RupeBazaar.in',
       description: 'Submit income, city, employment, and loan requirement details to check loan eligibility with RupeBazaar.in.'
@@ -283,6 +287,7 @@
       'car-loan.html': 'Car Loan',
       'education-loan.html': 'Education Loan',
       'calculators.html': 'Loan EMI Calculator',
+      'credit-cards.html': 'Credit Cards',
       'eligibility.html': 'Loan Eligibility',
       'loan-faq.html': 'Loan FAQ',
       'loan-guides.html': 'Loan Guides',
