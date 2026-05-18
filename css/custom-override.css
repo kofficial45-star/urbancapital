@@ -2040,6 +2040,10 @@ body { padding-top:0; }
 .rb-cc-blue::after { background: linear-gradient(135deg, #1a6d88, #072940); }
 .rb-cc-green::after { background: linear-gradient(135deg, #0f8c54, #04391f); }
 .rb-cc-purple::after { background: linear-gradient(135deg, #2d2530, #b41f5d); }
+.rb-cc-slate::after { background: linear-gradient(135deg, #6b7468, #121815); }
+.rb-cc-violet::after { background: linear-gradient(135deg, #6a218e, #2b0a45); }
+.rb-cc-brown::after { background: linear-gradient(135deg, #9a5525, #2c1610); }
+.rb-cc-sky::after { background: linear-gradient(135deg, #7cc7f5, #165987); }
 .rb-bank-chip {
   position: absolute;
   top: 58px;
@@ -2100,11 +2104,18 @@ body { padding-top:0; }
 .rb-cc-blue .rb-cc-ribbon { background: linear-gradient(135deg, rgba(18,103,131,.94), rgba(5,53,78,.94)); }
 .rb-cc-green .rb-cc-ribbon { background: linear-gradient(135deg, rgba(12,128,72,.94), rgba(7,66,38,.94)); }
 .rb-cc-purple .rb-cc-ribbon { background: linear-gradient(135deg, rgba(151,20,77,.94), rgba(64,24,48,.94)); }
+.rb-cc-slate .rb-cc-ribbon { background: linear-gradient(135deg, rgba(92,103,86,.94), rgba(28,34,29,.94)); }
+.rb-cc-violet .rb-cc-ribbon { background: linear-gradient(135deg, rgba(111,39,148,.94), rgba(45,14,74,.94)); }
+.rb-cc-brown .rb-cc-ribbon { background: linear-gradient(135deg, rgba(151,84,36,.94), rgba(54,28,18,.94)); }
+.rb-cc-sky .rb-cc-ribbon { background: linear-gradient(135deg, rgba(37,114,174,.94), rgba(16,67,112,.94)); }
 .rb-cc-visual ul {
   position: relative;
   z-index: 4;
   margin: 170px 0 0;
   padding-left: 18px;
+}
+.rb-cc-visual:not(.rb-cc-real) ul {
+  display: none;
 }
 .rb-cc-visual li {
   list-style: disc;
@@ -2148,6 +2159,11 @@ body { padding-top:0; }
 .rb-cc-actions .ve-btn-primary {
   padding: 12px 20px;
   border-radius: 999px;
+}
+.rb-cc-actions .ve-btn-ghost {
+  border-color: #d7e2ef;
+  color: var(--ve-dark);
+  background: #fff;
 }
 .rb-card-detail-panel {
   background: #fff;
@@ -2198,6 +2214,15 @@ body { padding-top:0; }
 }
 .rb-detail-grid .ve-ca-list li {
   list-style: none;
+}
+.rb-card-note {
+  margin-top: 20px;
+  padding: 14px 16px;
+  border: 1px solid #f0d48b;
+  border-radius: 14px;
+  background: #fff8e7;
+  color: #5d4b21;
+  line-height: 1.6;
 }
 @media(max-width: 991px) {
   .rb-credit-card-grid,
