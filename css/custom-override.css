@@ -1665,6 +1665,7 @@ body { padding-top:0; }
   line-height: 1.05;
   font-weight: 900;
   margin: 16px 0;
+  color: #fff;
 }
 .rb-local-hero h1 span { color: var(--ve-gold); }
 .rb-local-hero p {
