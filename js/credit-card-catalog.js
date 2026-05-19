@@ -226,12 +226,66 @@
   const detailsContainer = document.querySelector('#card-details .container');
   if (!grid || !detailsContainer) return;
   const header = document.querySelector('#cards .ve-section-header');
+  const cardOverrides = {
+    'sbi-cashback': {
+      image: 'https://i.ibb.co/hx4PtGKn/SBI-cashback-credit-card-The-Reward-Realm.jpg',
+      applyUrl: 'https://bitli.in/cxQ7pxt'
+    },
+    'kotak-cashback-plus': {
+      image: 'https://i.ibb.co/qLTCHrn4/Kotak-Cashback-Credit-Card-removebg-preview.png',
+      applyUrl: 'https://bitli.in/KDt8gaI'
+    },
+    'bobcard-eterna': {
+      image: 'https://i.ibb.co/gFvpqybT/bob-eterna-credit-card-removebg-preview.png',
+      applyUrl: 'https://bitli.in/2kzlcwv'
+    },
+    'sbi-simplyclick': {
+      image: 'https://i.ibb.co/d0LRdFQP/SBI-Simply-CLICK-Credit-Card-removebg-preview.png',
+      applyUrl: 'https://bitli.in/ffohAeN'
+    },
+    'axis-neo-rupay': {
+      image: 'https://i.ibb.co/NbGtRCm/Axis-Bank-Neo-Credit-Card-removebg-preview.png',
+      applyUrl: 'https://bitli.in/77GWjgP'
+    },
+    'kotak-league-platinum': {
+      image: 'https://i.ibb.co/wZQGf3S2/Kotak-League-Platinum-Credit-Card-removebg-preview.png',
+      applyUrl: 'https://bitli.in/B308c1S'
+    },
+    'sbm-zet': {
+      image: 'https://i.ibb.co/nsYXk7k8/SBM-ZET-Credit-Card-1-removebg-preview.png',
+      applyUrl: 'https://bitli.in/o6istH9'
+    },
+    'sbm-novio': {
+      applyUrl: 'https://bitli.in/W34cDmr'
+    },
+    'zagg-rupay': {
+      applyUrl: 'https://bitli.in/5qFmrP3'
+    }
+  };
+  const applyByCardName = {
+    'SBI Cashback Credit Card': 'https://bitli.in/cxQ7pxt',
+    'Kotak Cashback Plus Credit Card': 'https://bitli.in/KDt8gaI',
+    'BOBCARD Eterna Credit Card': 'https://bitli.in/2kzlcwv',
+    'SBI SimplyCLICK Credit Card': 'https://bitli.in/ffohAeN',
+    'Axis Neo RuPay Credit Card': 'https://bitli.in/77GWjgP',
+    'Kotak League Platinum Credit Card': 'https://bitli.in/B308c1S',
+    'SBM ZET Credit Card': 'https://bitli.in/o6istH9',
+    'SBM Novio Credit Card': 'https://bitli.in/W34cDmr',
+    'Zagg RuPay Credit Card': 'https://bitli.in/5qFmrP3'
+  };
 
   function normalize(text) {
     return String(text || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
   }
 
   function cardVisual(card) {
+    if (card.image) {
+      return `
+        <div class="rb-cc-visual rb-cc-real rb-cc-live-image ${card.theme}">
+          <img src="${card.image}" alt="${card.cardName}" loading="lazy" onerror="this.classList.add('is-missing')">
+        </div>`;
+    }
+
     return `
       <div class="rb-cc-visual ${card.theme}">
         <div class="rb-bank-chip">${card.bank}</div>
@@ -253,7 +307,7 @@
           <p>${card.short}</p>
           <div class="rb-cc-actions">
             <a href="#${card.id}" class="ve-btn-ghost">View Details</a>
-            <a href="#" class="ve-btn-primary rb-apply-link" data-card="${card.cardName}">Apply Now</a>
+            <a href="${card.applyUrl || '#'}" class="ve-btn-primary rb-apply-link" data-card="${card.cardName}" target="_blank" rel="noopener">Apply Now</a>
           </div>
         </div>
       </article>`;
@@ -280,7 +334,7 @@
             <h3>${card.cardName}</h3>
             <p>${card.short}</p>
           </div>
-          <a href="#" class="ve-btn-primary rb-apply-link" data-card="${card.cardName}">Apply Now</a>
+          <a href="${card.applyUrl || '#'}" class="ve-btn-primary rb-apply-link" data-card="${card.cardName}" target="_blank" rel="noopener">Apply Now</a>
         </div>
         <div class="rb-detail-grid">
           <div><h4>Key Benefits</h4><ul class="ve-ca-list">${checkedItems(card.benefits)}</ul></div>
@@ -306,13 +360,23 @@
     `);
   }
 
-  grid.insertAdjacentHTML('beforeend', cards.map(listCard).join(''));
+  grid.insertAdjacentHTML('beforeend', cards.map((card) => {
+    return listCard({ ...card, ...(cardOverrides[card.id] || {}) });
+  }).join(''));
 
   cards.forEach((card) => {
+    card = { ...card, ...(cardOverrides[card.id] || {}) };
     const existing = document.getElementById(card.id);
     if (!existing) {
       detailsContainer.insertAdjacentHTML('beforeend', detailPanel(card));
     }
+  });
+  document.querySelectorAll('.rb-apply-link').forEach((link) => {
+    const applyUrl = applyByCardName[link.dataset.card];
+    if (!applyUrl) return;
+    link.href = applyUrl;
+    link.target = '_blank';
+    link.rel = 'noopener';
   });
 
   const count = document.querySelector('.rb-card-hero .rb-hero-panel strong');
